@@ -1,0 +1,195 @@
+body
+{
+
+}
+
+articletop {
+   float:left;
+   width:100%;
+   color:white;
+   background-color:slategray;
+   padding-left:10px;
+   padding-top:10px;
+   padding-bottom:10px;
+   font-family:"Georgia", "Serif";
+}
+
+article1 {
+    float:left;
+    height:120px;
+    width:33.1%;
+    /*
+      */
+    background-color:WhiteSmoke;
+}
+article2 {
+    float:left;
+    height:120px;
+    width:33.1%;
+    /*
+      */
+}
+article3 {
+    float:right;
+    height:120px;
+    width:33.1%;
+    /*
+      */
+    background-color:whitesmoke;
+}
+article4 {
+   float:left;
+   height:120px;
+   width:33.1%;
+
+
+
+}
+article5 {
+   float:left;
+   height:120px;
+   width:33.79%;
+   background-color:whitesmoke;
+
+
+}
+article6 {
+   float:right;
+   height:120px;
+   width:33.1%;
+
+
+
+}
+article7 {
+   float:left;
+   height:120px;
+   width:33.1%;
+   background-color:whitesmoke;
+
+
+}
+
+article8 {
+   float:left;
+   height:120px;
+   width:33.1%;
+
+
+
+}
+
+article9 {
+   float:right;
+   height:120px;
+   width:33.1%;
+   background-color:whitesmoke;
+
+
+}
+article10 {
+   float:left;
+   height:120px;
+   width:33.1%;
+
+
+
+}
+article11 {
+   float:left;
+   height:120px;
+   width:33.79%;
+   background-color:whitesmoke;
+
+
+}
+article12 {
+   float:right;
+   height:120px;
+   width:33.1%;
+
+
+}
+article13 {
+   float:left;
+   height:120px;
+   width:33.1%;
+   background-color:whitesmoke;
+
+
+}
+article14 {
+   float:left;
+   height:120px;
+   width:33.1%;
+
+
+}
+article15 {
+   float:right;
+   height:120px;
+   width:33.1%;
+   background-color:whitesmoke;
+
+}
+article50 {
+
+   height:60px;
+   float:left;
+   padding-left:100px;
+   padding-right:100px;
+   border-style:solid;
+}
+footer {
+    float:right;
+    width:15%;
+}
+
+/*Style for in progress page is below: */
+article1-2 {
+   border-style:solid;
+   height:60px;
+   float:left;
+   padding-left:100px;
+   padding-right:100px;
+}
+
+article1-9 {
+    float:left;
+    padding-top:300px;
+}
+
+/*Results Section CSS*/
+article1-R {
+   border-style:solid;
+   height:120px;
+   float:left;
+   padding-left:100px;
+   padding-right:100px;
+}
+
+article2-R {
+   border-style:solid;
+   height:120px;
+   float:left;
+   padding-left:100px;
+   padding-right:100px;
+}
+
+
+/*Final Report */
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid;
+    padding: 15px;
+}
+
+footer {
+    float: right;
+}
+
+
+
