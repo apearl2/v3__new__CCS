@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Custom College Search</title>
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+
+    <articletop>
+        Custom College Search &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a style="text-decoration-color:mediumseagreen;" href="https://docs.google.com/document/d/1QtNWo_EUQdz14494aZvGdapv7yCHZZ70vJnsSHIqkJA/edit?tab=t.0"><span style="color:mediumseagreen;">Instructions</span></a>
+         <br />
+    </articletop>
+
+    <!-- Link to CSS File -->
+    <link href="static/IS.UI_V1.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+<span style="accent-color:mediumseagreen">
+    <!-- Main form statement -->
+    <form action="/calculate">
+
+        <!-- College Factual Attributes ------------->
+        <!-- Undergrad School-->
+        <article1 id="usRanking">
+            <br /> &nbsp Undergrad School: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <br />
+            <span style="accent-color:mediumseagreen">
+		    &nbsp;&nbsp;LA/S
+		    <input type="radio" value="LiBeral Arts_" name="s_">
+		    ENGR
+		    <input type="radio" value="Engineering_" name="s_">
+		    Business
+		    <input type="radio" value="Business_" name="s_">
+		    General St
+		    <input type="radio" value="General Studies_" name="s_">
+		    PreMed
+		    <input type="radio" value="Pre-med_" name="s_">
+
+            <br /> <br />
+            &nbsp Importance:
+
+            <input type="radio"  value="0" name="b_">
+            <input type="radio"  value="1" name="b_">
+            <input type="radio"  value="2" name="b_">
+            <input type="radio"  value="3" name="b_">
+            <input type="radio"  value="4" name="b_">
+            <input type="radio"  value="5" name="b_">
+            <input type="radio"  value="6" name="b_">
+            <input type="radio"  value="7" name="b_">
+            <input type="radio"  value="8" name="b_">
+            <input type="radio"  value="9" name="b_">
+            </span>
+            <br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9
+
+        </article1>
+
+         <!-- Intended Major -->
+        <article2 id="intendMajor">
+            <br /> &nbsp Intended Major:
+			<input id="intendMajorI" type="text" name="wut_">
+			<br /><br />
+			&nbsp Importance:
+
+            <span style="accent-color:mediumseagreen">
+			<input type="radio" value="0" name="z_">
+			<input type="radio" value="1" name="z_">
+			<input type="radio" value="2" name="z_">
+			<input type="radio" value="3" name="z_">
+			<input type="radio" value="4" name="z_">
+			<input type="radio" value="5" name="z_">
+			<input type="radio" value="6" name="z_">
+			<input type="radio" value="7" name="z_">
+			<input type="radio" value="8" name="z_">
+			<input type="radio" value="9" name="z_">
+            </span>
+
+            <br />
+
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9
+		</article2>
+
+
+        <!-- Overall Prestige-->
+        <article3 id="oPrestige">
+            <br /> &nbsp Overall Prestige: <br /> <br />
+            &nbsp Importance:
+
+            <input type="radio"  value="0" name="c_">
+            <input type="radio"  value="1" name="c_">
+            <input type="radio"  value="2" name="c_">
+            <input type="radio"  value="3" name="c_">
+            <input type="radio"  value="4" name="c_">
+            <input type="radio"  value="5" name="c_">
+            <input type="radio"  value="6" name="c_">
+            <input type="radio"  value="7" name="c_">
+            <input type="radio"  value="8" name="c_">
+            <input type="radio"  value="9" name="c_">
+            <br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9
+        </article3>
+
+
+        <!-- Princeton Review Attributes------------->
+        <article4 id="sSatisfaction">
+            <br /> &nbsp Student Satisfaction: <br /> <br />
+            &nbsp Importance:
+            <input type="radio"  value="0" name= "d_">
+            <input type="radio"  value="1" name= "d_">
+            <input type="radio"  value="2" name= "d_">
+            <input type="radio"  value="3" name= "d_">
+            <input type="radio"  value="4" name= "d_">
+            <input type="radio"  value="5" name= "d_">
+            <input type="radio"  value="6" name= "d_">
+            <input type="radio"  value="7" name= "d_">
+            <input type="radio"  value="8" name= "d_">
+            <input type="radio"  value="9" name= "d_">
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9
+        </article4>
+
+        <article5 id="spScene">
+            <br /> &nbsp Sports Scene: <br /> <br />
+            &nbsp Importance:
+            <input type="radio"  value="0" name= "e_">
+            <input type="radio"  value="1" name= "e_">
+            <input type="radio"  value="2" name= "e_">
+            <input type="radio"  value="3" name= "e_">
+            <input type="radio"  value="4" name= "e_">
+            <input type="radio"  value="5" name= "e_">
+            <input type="radio"  value="6" name= "e_">
+            <input type="radio"  value="7" name= "e_">
+            <input type="radio"  value="8" name= "e_">
+            <input type="radio"  value="9" name= "e_">
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9
+        </article5>
+
+        <article6 id="cBeauty">
+            <br /> &nbsp Campus Beauty: <br /> <br />
+            &nbsp Importance:
+
+
+
+
+            <input type="radio"  value="0" name=  "x_">
+            <input type="radio"  value="1" name=  "x_">
+            <input type="radio"  value="2" name=  "x_">
+            <input type="radio"  value="3" name=  "x_">
+            <input type="radio"  value="4" name=  "x_">
+            <input type="radio"  value="5" name=  "x_">
+            <input type="radio"  value="6" name=  "x_">
+            <input type="radio"  value="7" name=  "x_">
+            <input type="radio"  value="8" name=  "x_">
+            <input type="radio"  value="9" name=  "x_">
+
+
+
+
+
+
+
+
+
+            <br />
+
+
+
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9
+
+
+
+
+
+
+
+
+        </article6>
+
+        <article7 id="cTown">
+            <br /> &nbsp College Town: <br /> <br />
+            &nbsp Importance:
+
+
+
+
+            <input type="radio"  value="0" name=  "f_">
+            <input type="radio"  value="1" name=  "f_">
+            <input type="radio"  value="2" name=  "f_">
+            <input type="radio"  value="3" name=  "f_">
+            <input type="radio"  value="4" name=  "f_">
+            <input type="radio"  value="5" name=  "f_">
+            <input type="radio"  value="6" name=  "f_">
+            <input type="radio"  value="7" name= "f_">
+            <input type="radio"  value="8" name= "f_">
+            <input type="radio"  value="9" name= "f_">
+
+
+
+
+
+
+
+
+
+            <br />
+
+
+
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9
+
+
+
+
+
+
+
+
+        </article7>
+
+        <article8 id="Diversity">
+            <br /> &nbsp Diversity: <br /> <br />
+            &nbsp Importance:
+
+
+
+
+            <input type="radio"  value="0" name= "g_">
+            <input type="radio"  value="1" name= "g_">
+            <input type="radio"  value="2" name= "g_">
+            <input type="radio"  value="3" name= "g_">
+            <input type="radio"  value="4" name= "g_">
+            <input type="radio"  value="5" name= "g_">
+            <input type="radio"  value="6" name= "g_">
+            <input type="radio"  value="7" name= "g_">
+            <input type="radio"  value="8" name= "g_">
+            <input type="radio"  value="9" name= "g_">
+
+
+
+
+
+
+
+
+
+            <br />
+
+
+
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9
+
+
+
+
+
+
+
+
+        </article8>
+
+        <article9 id="Dorms">
+            <br /> &nbsp Dorms: <br /> <br />
+            &nbsp Importance:
+
+
+
+
+            <input type="radio"  value="0" name= "h_">
+            <input type="radio"  value="1" name= "h_">
+            <input type="radio"  value="2" name= "h_">
+            <input type="radio"  value="3" name= "h_">
+            <input type="radio"  value="4" name= "h_">
+            <input type="radio"  value="5" name= "h_">
+            <input type="radio"  value="6" name= "h_">
+            <input type="radio"  value="7" name= "h_">
+            <input type="radio"  value="8" name= "h_">
+            <input type="radio"  value="9" name= "h_">
+
+
+
+
+
+
+
+
+
+            <br />
+
+
+
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9
+
+
+
+
+
+
+
+
+        </article9>
+
+        <article10 id="Food">
+     <br /> &nbsp Food: <br /> <br />
+     &nbsp Importance:
+
+
+
+
+        <input type="radio"  value="0" name= "i_">
+        <input type="radio"  value="1" name= "i_">
+        <input type="radio"  value="2" name= "i_">
+        <input type="radio"  value="3" name= "i_">
+        <input type="radio"  value="4" name= "i_">
+        <input type="radio"  value="5" name= "i_">
+        <input type="radio"  value="6" name= "i_">
+        <input type="radio"  value="7" name= "i_">
+        <input type="radio"  value="8" name= "i_">
+        <input type="radio"  value="9" name= "i_">
+
+
+
+
+
+
+
+
+
+        <br />
+
+
+
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9
+
+
+
+
+
+
+
+
+  </article10>
+
+        <article11 id="publicValue">
+            <br /> &nbsp Public College Value: <br /> <br />
+            &nbsp Importance:
+
+
+
+
+            <input type="radio"  value="0" name= "j_">
+            <input type="radio"  value="1" name= "j_">
+            <input type="radio"  value="2" name= "j_">
+            <input type="radio"  value="3" name= "j_">
+            <input type="radio"  value="4" name= "j_">
+            <input type="radio"  value="5" name= "j_">
+            <input type="radio"  value="6" name= "j_">
+            <input type="radio"  value="7" name= "j_">
+            <input type="radio"  value="8" name= "j_">
+            <input type="radio"  value="9" name= "j_">
+
+
+
+
+
+
+
+
+
+            <br />
+
+
+
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9
+
+
+
+
+        </article11>
+
+        <article12 id="privateValue">
+            <br /> &nbsp Private College Value: <br /> <br />
+            &nbsp Importance:
+
+
+
+
+            <input type="radio"  value="0" name= "k_">
+            <input type="radio"  value="1" name= "k_">
+            <input type="radio"  value="2" name= "k_">
+            <input type="radio"  value="3" name= "k_">
+            <input type="radio"  value="4" name= "k_">
+            <input type="radio"  value="5" name= "k_">
+            <input type="radio"  value="6" name= "k_">
+            <input type="radio"  value="7" name= "k_">
+            <input type="radio"  value="8" name= "k_">
+            <input type="radio"  value="9" name= "k_">
+
+
+
+
+
+
+
+
+
+            <br />
+
+
+
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9
+
+
+
+
+
+
+
+
+        </article12>
+
+        <article13 id="publicIC">
+            <br /> &nbsp Internships (Public Colleges): <br /> <br />
+            &nbsp Importance:
+
+            <input type="radio"  value="0" name= "l_">
+            <input type="radio"  value="1" name= "l_">
+            <input type="radio"  value="2" name= "l_">
+            <input type="radio"  value="3" name= "l_">
+            <input type="radio"  value="4" name= "l_">
+            <input type="radio"  value="5" name= "l_">
+            <input type="radio"  value="6" name= "l_">
+            <input type="radio"  value="7" name= "l_">
+            <input type="radio"  value="8" name= "l_">
+            <input type="radio"  value="9" name= "l_">
+
+
+
+
+
+
+
+
+
+            <br />
+
+
+
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9
+
+
+
+
+
+
+
+
+        </article13>
+
+        <article14 id="privateIC">
+            <br /> &nbsp Internships (Private Colleges): <br /> <br />
+            &nbsp Importance:
+
+
+
+
+            <input type="radio"  value="0" name= "m_">
+            <input type="radio"  value="1" name= "m_">
+            <input type="radio"  value="2" name= "m_">
+            <input type="radio"  value="3" name= "m_">
+            <input type="radio"  value="4" name= "m_">
+            <input type="radio"  value="5" name= "m_">
+            <input type="radio"  value="6" name= "m_">
+            <input type="radio"  value="7" name= "m_">
+            <input type="radio"  value="8" name= "m_">
+            <input type="radio"  value="9" name= "m_">
+
+
+
+
+
+
+
+
+
+            <br />
+
+
+
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9
+
+
+
+
+
+
+
+
+        </article14>
+        <article15 id="Research">
+            <br /> &nbsp Research Area: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <span style="accent-color:mediumseagreen">
+
+		    <select name="C" id="rChoice">
+                <option value="Architecture">Architecture</option>
+                <option value="Business">Business</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="ComputerScience">Comp Sci</option>
+                <option value="Economics">Economics</option>
+                <option value="Engineering">Engineering</option>
+                <option value="English">English</option>
+                <option value="Finance">Finance</option>
+                <option value="PoliticalScience">Polit Sci</option>
+                <option value="PreMed">Pre Med</option>
+                <option value="Psychology">Psychology</option>
+            </select>
+
+            <br /> <br />
+            &nbsp Importance:
+
+            <input type="radio"  value="0" name="Z_">
+            <input type="radio"  value="1" name="Z_">
+            <input type="radio"  value="2" name="Z_">
+            <input type="radio"  value="3" name="Z_">
+            <input type="radio"  value="4" name="Z_">
+            <input type="radio"  value="5" name="Z_">
+            <input type="radio"  value="6" name="Z_">
+            <input type="radio"  value="7" name="Z_">
+            <input type="radio"  value="8" name="Z_">
+            <input type="radio"  value="9" name="Z_">
+            </span>
+            <br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9
+
+        </article15>
+
+        <!-- To Submit Form ------------------------------------------------------------------------------------------->
+        <article50>
+            <br />
+            <button>Get your Rankings</button>
+
+        </article50>
+
+    </form>
+</span>
+    <footer>
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v1.5
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last Updated: 12/12/24
+        <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/apearl2">Connect on Github</a>
+        <br/>
+    </footer>
+</body>
+</html>
