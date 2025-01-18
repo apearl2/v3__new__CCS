@@ -3,6 +3,7 @@ Custom college search web application made with Flask
 
 
 Project Timeline:
+
 9/30 - Create user interface for Intended major, and safety attributes, basic UI
 
 10/1 - Add tuition cutoff, generate report in console for selected attributes, started to work on storing importance values as variables
@@ -87,4 +88,6 @@ Project Timeline:
 12/31 - Finished Final Report, matched code from PC to PA. Mostly fixed duplicates in final list on PA version. 
 
 1/1 - Continued working on bug fixes, Final Report now works once on PA. Manually added more colleges to aRateDict and sizeDict
+
+1/2 - Final code inputted in PythonAnywhere, including random name algorithm for creating specialAreport files
 
