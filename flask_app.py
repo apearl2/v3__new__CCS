@@ -20,6 +20,7 @@ import random
 #If '...' appears below the confirm button on the results page, there was an error in processing the input string
 #Intended Major appearing when not selected
 
+#2/4-> Updated Again for new design on Asus, post independent study presentation
 
 #Global Variables-------------------------------------------------------------------------------------------------------
 newrankList = []
