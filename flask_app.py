@@ -1746,6 +1746,10 @@ def filter():
                 ninth = filterList[8]
                 tenth = filterList[9]
 
+                #Fake list for git commits
+                fakelist = []
+                fakelist.append(first)
+
                 #Reformats, then appends to list to be used in attribute-by-attribute report page
                 preattList = []
                 ipl = 0
