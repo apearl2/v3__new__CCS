@@ -21,6 +21,7 @@ import random
 #Intended Major appearing when not selected
 
 #2/4-> Updated Again for new design on Asus, post independent study presentation
+#2/6-> Test Commit to pass through to PA
 
 #Global Variables-------------------------------------------------------------------------------------------------------
 newrankList = []
