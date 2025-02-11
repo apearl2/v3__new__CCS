@@ -1750,6 +1750,7 @@ def filter():
                 fakelist = []
                 #2/10 renamed
                 #It's the return of the no wait ah wait you're kidding
+                #He didn't just say what I think he said Diddy?
 
                 #Reformats, then appends to list to be used in attribute-by-attribute report page
                 preattList = []
