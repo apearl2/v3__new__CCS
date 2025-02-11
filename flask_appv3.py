@@ -1750,8 +1750,6 @@ def filter():
                 fakelist = []
                 #2/10 renamed
                 #It's the return of the no wait ah wait you're kidding
-                #He didn't just say what I think he said Diddy?
-                #And everyone cares what Dr. Dre said
 
                 #Reformats, then appends to list to be used in attribute-by-attribute report page
                 preattList = []
