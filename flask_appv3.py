@@ -2027,8 +2027,6 @@ def areport():
     #print(htmlCode)
 
     #2/11 Test Github
-    fake2list = []
-    fake2list.append("Hello")
     
     #1/2 file creation version using random module
     nameNum = 1
