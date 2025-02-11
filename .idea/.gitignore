@@ -6,4 +6,7 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
-__pycache__/
+
+#Ignore Pycache
+__pycache__/flask_appv3.cpython-310.pyc
+https://github.com/apearl2/v3__new__CCS/blob/main/__pycache__/flask_appv3.cpython-310.pyc
