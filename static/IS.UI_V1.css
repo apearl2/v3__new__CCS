@@ -1,8 +1,23 @@
-body
-{
-
+/*Hover on text CSS */
+.hide {
+  display: none;
 }
 
+.myDIV:hover + .hide {
+  display: block;
+  color: grey;
+  border-style:solid;
+  border-width:1px;
+  border-color:black;
+}
+
+.myDIVT:hover + .hide {
+  display: block;
+  color: black;
+  background-color:white;
+}
+
+/*----------------------------------------------------------------*/
 articletop {
    float:left;
    width:100%;

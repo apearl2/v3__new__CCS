@@ -9,8 +9,21 @@
     <link href="../static/IS.UI_V1.css" type="text/css" rel="stylesheet">
 
     <articletop>
-        Custom College Search &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a style="text-decoration-color:mediumseagreen;" href="https://docs.google.com/document/d/1QtNWo_EUQdz14494aZvGdapv7yCHZZ70vJnsSHIqkJA/edit?tab=t.0"><span style="color:mediumseagreen;">Instructions</span></a>
-         <br />
+        <div class="myDIVT">Custom College Search &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:mediumseagreen;">Instructions</span></div> <div class="hide"><html lang="en">
+<body>
+    <h2>Filtered Results</h2>
+    <ul>
+        <li>Your new top 10 schools will be displayed after the original list is trimmed based on your acceptance rate and population choices</li>
+        <li>Hit “Get Your Final Stats” button to show a table of each college on your filter list and how many points it scored in each attribute</li>
+    </ul>
+
+</body>
+</html>
+
+        </div>
+
+        <!--Old... Custom College Search &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a style="text-decoration-color:mediumseagreen;" href="https://docs.google.com/document/d/1QtNWo_EUQdz14494aZvGdapv7yCHZZ70vJnsSHIqkJA/edit?tab=t.0"><span style="color:mediumseagreen;">Instructions</span></a>
+        <br />-->
     </articletop>
 </head>
 <body>
@@ -37,7 +50,9 @@
     10. {{ value10b }}
     <br />
     <br />
+    <div style="color:white">
     {{ valuepal }}
+    </div>
 
     <article1-2>
         <form action='/areport'>
