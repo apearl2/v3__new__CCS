@@ -18,9 +18,6 @@
    font-size:15px;
 }
 
-articleinfo {
-    background-color:slategray;
-}
 /*----------------------------------------------------------------*/
 articletop {
    float:left;
@@ -210,5 +207,13 @@ footer {
     float: right;
 }
 
+/*Back button style*/
+.backB {
+   background-color:slategray;
+    color:white;
+    border-style:solid;
+    border-color:white;
+    font-family:"Georgia", "Serif";
+}
 
 
