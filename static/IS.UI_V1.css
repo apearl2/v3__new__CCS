@@ -14,9 +14,13 @@
 .myDIVT:hover + .hide {
   display: block;
   color: black;
-  background-color:white;
+  background-color:whitesmoke;
+   font-size:15px;
 }
 
+articleinfo {
+    background-color:slategray;
+}
 /*----------------------------------------------------------------*/
 articletop {
    float:left;
