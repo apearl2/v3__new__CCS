@@ -148,14 +148,58 @@ article15 {
    background-color:whitesmoke;
 
 }
-article50 {
+
+article16 {
+   float:left;
+   height:120px;
+   width:33.1%;
+
+}
+article17 {
+   float:left;
+   height:120px;
+   width:33.79%;
+   background-color:whitesmoke;
+
+}
+
+article18 {
+   float:right;
+   height:120px;
+    width:33.1%;
+
+}
+
+.container {
+  height: 120px;
+  position: relative;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.grbutton {
+    padding-top:20px;
+    padding-bottom:20px;
+
+    border-style:solid;
+    padding-left:60px;
+    padding-right:60px;
+}
+/**article50 {
 
    height:60px;
-   float:left;
+   float:right;
    padding-left:100px;
    padding-right:100px;
    border-style:solid;
-}
+}**/
 footer {
     float:right;
     width:15%;
