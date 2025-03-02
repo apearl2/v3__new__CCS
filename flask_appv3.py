@@ -12,13 +12,16 @@ except ImportError:
 
 from prettytable import PrettyTable
 #import os
-#import time
+import time
 import random
+
+from selenium import webdriver
+import re
 
 #-----------------------------------------------------------------------------------------------------------------------
 #Bugs 12/31 v
 #If '...' appears below the confirm button on the results page, there was an error in processing the input string
-#Intended Major appearing when not selected
+#Intended Major appearing when not selected in final report
 
 #2/4-> Updated Again for new design on Asus, post independent study presentation
 #2/6-> Test Commit to pass through to PA
@@ -28,9 +31,12 @@ newrankList = []
 finalList = []
 finalListCollegesOnlyP = []
 finalListCollegesOnlyC = []
+finalListCollegesOnlyU = []
 reportfinalListP = []
 reportfinalListC = []
+reportfinalListU = []
 customList = []
+fullListU = []
 fullListP = []
 fullListC = []
 tfullListC = []
@@ -269,6 +275,7 @@ def listA(order, funkName):
     global baseList
     global finalListCollegesOnlyP
     global finalListCollegesOnlyC
+    global finalListCollegesOnlyU
     global baseList2
     global aImportance
     global TICKER
@@ -406,11 +413,76 @@ def listA(order, funkName):
 
                 i2 += 1
 
+    """If USNews function is called
+    elif funkName == "U":
+        ##print(lennrl)
+        #TODO
+
+        # Multiples baseList by User-Selected Importance Value
+        ##print(type(aImportance))
+        while g < len(baseList):
+            ##print(baseList[g])
+            baseList[g] *= aImportance
+            ##print(baseList[g])
+            baseList2[g] *= aImportance
+            g += 1
+        ##print(baseList2)
+        # Determines if it is first attribute or not
+        if order == 1:
+            # First attribute process
+            while i < lennrl:
+                finalList.append(newrankList[i])
+                if lennrl < 50:
+                    finalList.append(baseList[i])
+                else:
+                    finalList.append(baseList2[i])
+
+                finalListCollegesOnlyC.append(newrankList[i])
+                i += 1
+        else:
+            # Second Attribute Process
+            while i2 < lennrl:
+                # Repeats for every element in newrankList
+                alreadyExists = False
+                i3 = 0
+
+                while i3 < len(finalList):
+                    # If college already exists in final list
+                    if newrankList[i2] == finalList[i3]:
+                        if lennrl < 50:
+                            finalList.insert((i3 + 1), baseList[i2])
+                        else:
+                            finalList.insert((i3 + 1), baseList2[i2])
+
+                        alreadyExists = True
+                        # #print(alreadyExists)
+                        break
+
+                    i3 += 1
+                # #print(alreadyExists)
+                if alreadyExists == False:
+                    finalList.append(newrankList[i2])
+                    if lennrl < 50:
+                        finalList.append(baseList[i2])
+                    else:
+                        finalList.append(baseList2[i2])
+
+                    # Adds requisite zeros
+                    it = 0
+                    while it < (TICKER - 1):
+                        finalList.append(0)
+                        it += 1
+
+                    finalListCollegesOnlyC.append(newrankList[i2])
+                else:
+                    pass
+
+                i2 += 1
     #Now adds zeros to colleges not in most recent list------------------------
     if order > 1:
         previousZeros()
 
-    ##print(finalList)
+    ##print(finalList)"""
 
 #Average-creating function, (must run twice for C and P)
 def averageA(funkName2):
@@ -871,7 +943,6 @@ def princetonReview(pChoice, pImportance):
     #print("nrl \n\n")
     #print(newrankList)
 
-
 #College Vine Function------------------------------------------------------------------------------------------------------
 def cVine(pChoice, pImportance):
     global newrankList
@@ -942,6 +1013,140 @@ def cVine(pChoice, pImportance):
 
     #print("nrl \n\n")
     #print(newrankList)
+
+#USNews Function------------------------------------------------------------------------------------------------------------
+def usNews(pChoice, pImportance):
+    global newrankList
+    global aImportance
+    aImportance = int(pImportance)
+
+    # Set the path to the Chromedriver
+    DRIVER_PATH = '/path/to/chromedriver'
+
+    # Initialize the Chrome driver
+    driver = webdriver.Chrome()
+
+    query2 = "USNews 2024/25 Best Colleges for major in " + pChoice
+
+    for k in search(query2, tld="co.in", num=1, stop=1, pause=2):
+        goodURL2 = k
+
+    # print("Hello: " + goodURL2)
+
+    # Navigate to the URL
+    selURL = goodURL2
+
+    """     Major test URLS
+            English: https://www.usnews.com/best-graduate-schools/top-humanities-schools/english-rankings'
+            IE: 'https://www.usnews.com/best-graduate-schools/top-engineering-schools/industrial-engineering-rankings'
+            Biology: 'https://www.usnews.com/best-graduate-schools/top-science-schools/biological-sciences-rankings'
+            Psychology: 'https://www.usnews.com/best-graduate-schools/top-humanities-schools/psychology-rankings'
+
+            MechE: 'https://www.usnews.com/best-colleges/rankings/engineering-doctorate-mechanical?_sort=rank&_sortDirection=asc'
+            Hospitality: 'https://www.usnews.com/best-colleges/hospitality-management-major-5209?_sort=rank&_sortDirection=asc'
+            Econ: 'https://www.usnews.com/best-colleges/rankings/economics-overall?_sort=rank&_sortDirection=asc'
+        """
+    driver.get(selURL)
+
+    # TODO Might have to alter for different computers--------------------------------------------------
+    time.sleep(5)
+
+    # Output full page HTML
+    # print(driver.page_source)
+    ut = driver.page_source
+    t = str(ut)
+    # print(t)
+
+    # Determmines if page is table or traditional rank...determines which method to use
+    # Each school's score reflects its average rating on a scale from 1 (marginal) to 5 (outstanding)
+    firstmatch = re.search("Span-sc-19wk4id-0 gqvMPj", t)
+    # print("firstmatch:")
+    # print(firstmatch)
+    if firstmatch != None:
+
+        # Method 1 (table style 0-5.0 rankings)---------------------------------------------------------------------------------------------
+        x = firstmatch
+        print(x)
+
+        nx = str(x)
+        # find first index full number
+        firstin = ""
+        nxi = 24
+        while nxi < 30:
+            firstin = firstin + nx[nxi]
+            nxi += 1
+        firstinint = int(firstin)
+        print(firstinint)
+        endii = firstinint + 40000
+
+        # New string starting at first school to last loaded school (still ~150,000 characters)
+        newt = t[firstinint:endii]
+        print(newt)
+
+        # Now parse string using beautifulsoup
+        newrankList = []
+
+        soup = BeautifulSoup(newt, 'html.parser')
+        j = soup.find_all('div', class_="Box-w0dun1-0 bihhZB")
+        print(j)
+        for element in j:
+            tempej = element['name']
+
+            # print(tempej)
+            newrankList.append(tempej)
+
+        # Special formatting cases
+        for elemt in newrankList:
+            # TODO not picking up 3/2
+            if elemt == 'columbia-university':
+                elemt = elemt + '-in-the-city-of-new-york'
+
+            if elemt == "university-of-michigan":
+                elemt = elemt + "-ann-arbor"
+
+            if elemt == "university-of-virginia":
+                elemt = elemt + "-main-campus"
+
+            if elemt == "university-of-texas-at-austin":
+                elemt = "the-university-of-texas-at-austin"
+
+        print(newrankList)
+
+
+    else:
+        # Method 2 (traditional rank boxes)------------------------------------------------
+        # y = re.search("List__ListItem-rhf5no-1 jYdEtR", t)
+        newrankList = []
+
+        soup = BeautifulSoup(t, 'html.parser')
+        j = soup.find_all('li', class_="List__ListItem-rhf5no-1 jYdEtR")
+        # print(j)
+        for element in j:
+            tempej2t = element.get_text()
+
+            # print(tempej2t)
+            char = "("
+            if char in tempej2t:
+                charind = tempej2t.index(char)
+                # print(charind)
+                tempej2 = tempej2t[:charind - 1]
+            else:
+                tempej2 = tempej2t
+
+            newrankList.append(tempej2)
+
+        # print(newrankList)
+
+    # List Comprehension to convert all to lowercase
+    newrankList = [x.lower() for x in newrankList]
+    newrankList = [w.replace(',', '') for w in newrankList]
+    newrankList = [z.replace('--', ' ') for z in newrankList]
+    newrankList = [y.replace(' ', '-') for y in newrankList]
+
+    print(newrankList)
+
+    # It's a good practice to close the browser when done
+    driver.quit()
 
 
 
@@ -1564,11 +1769,11 @@ def results():
     #converions() and averageA() for P calls
     conversions()
     averageA("P")
-    #print(reportfinalListP)
+    print(reportfinalListP)
 
     #Join P and CF list together-----------------------------------------------------------
     joinA()
-    #print(reportfinalListC)
+    print(reportfinalListC)
 
     #Deletes Southern New Hampshire University Case
     try:
@@ -1641,7 +1846,49 @@ def results():
 
     #return render_template('test.html', testV = reportfinalListC)
 
-    #Gets top 10 schools   ... or top 20 schools
+
+    #/////////////////////////////////////////////////////////////////////////////////////////////
+    #Still to do --- all attributes link to front end, including those that already exist (like in princetonReview function)
+
+    #3/2 - Finished USNews function, began working on front-end connection
+
+        """Attributes already up:
+                -Majors_________
+                -Food
+                -Diversity
+                -Campus
+                -Internships
+                
+            Attrributed not up yet:
+                -FYE
+                -Study abroad
+                """
+
+    finalList = []
+    #Intended major----------------
+    try:
+        intendMajorNameU = intendMajorName
+        intendMajorIMU = intendMajorIM
+
+        usNews(intendMajorNameU, intendMajorIMU)
+        listA(1, "C")
+
+        print(finalList)
+    except:
+        print("[]Intend Major not Called in U")
+        pass
+
+
+
+    #Now for all USNews Attributes-----------------------------------------------------------------------------------
+
+
+
+    #Joins USNews (reportfinalListU) with reportfinalListC-----------------------------------------------------------
+
+
+
+    #Gets top 10 schools   ... or top 20 schools---------------------------------------------------------------
     bestSort()
     tenor20 = request.args.get("z", "twenty")
     #print(tenor20)
