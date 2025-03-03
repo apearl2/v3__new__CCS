@@ -1324,7 +1324,8 @@ def next():
     #print(stl)
 
     #Increments stl to build up atl
-    i = 0
+    #3/2 change for in PyCharm
+    i = 7
     atl = ''
     while i < len(stl):
         atl = atl + stl[i]
@@ -1406,7 +1407,9 @@ def results():
     atlCheck = ""
 
     try:
-        underscore = atl[43]
+        underscore = atl[26]
+        #print("tried")
+        #In PA: underscore = atl[43]
     except:
         try:
             underscore = stl[43]
@@ -1417,12 +1420,17 @@ def results():
 
     #return render_template('test.html', testV = checkcount, testV2 = atl)
 
+    '''tempatl = atl
+    atl = str(tempatl)
+    print(atl)'''
 
     # Trims down inputStr
+    #3/2 - for now in PyCharm, this commented out and atl = atl v
     try:
-        endStr = atl.split(underscore)
+        endStr = atl.split(underscore, 1)
+        print(endStr)
         ultiStr = endStr[1]
-        #print(ultiStr)
+        print("ultiStr1 = ", ultiStr)
     except IndexError:
         ultiStr = str(atl)
 
@@ -1431,7 +1439,7 @@ def results():
 
     # Determines which attributes to actually search for----
 
-
+    #print(atl)
     # 3 CollegeFactual Attributes First---------------------
     # Undergrad School ranking
     called = False
@@ -1497,7 +1505,8 @@ def results():
         TICKER = 1
 
     if called == True:
-        nextStr = atl.split(underscore, 3)
+        nextStr = ultiStr.split(underscore, 3)
+        print(nextStr)
         ultiStr = nextStr[3]
         numCcalls = 1
 
@@ -1507,6 +1516,8 @@ def results():
     #v  called Determines if CF function is actually called
     called = False
     imNameEq = ultiStr.find("=")
+    print(ultiStr)
+    print("imNameEq = ", imNameEq)
     iiF = False
 
     #Loops through to find intended major importance
@@ -1718,7 +1729,9 @@ def results():
             except ValueError:
                 importanceList.append(0)
 
-    #print(importanceList)
+    print("importanceList: v")
+    print(importanceList)
+    #3/2 Should be 3-campus 5-diversity 6-dorms 7-food
 
     #Now calls the P functions
     i2 = 0
@@ -1870,6 +1883,7 @@ def results():
         intendMajorNameU = intendMajorName
         intendMajorIMU = intendMajorIM
 
+        print(intendMajorNameU)
         usNews(intendMajorNameU, intendMajorIMU)
         listA(1, "C")
 
@@ -1877,6 +1891,9 @@ def results():
     except:
         print("[]Intend Major not Called in U")
         pass
+
+    #Food---------------------------
+
 
 
 
