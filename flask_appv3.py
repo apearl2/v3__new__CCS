@@ -1020,122 +1020,277 @@ def usNews(pChoice, pImportance):
     global aImportance
     aImportance = int(pImportance)
 
-    # Set the path to the Chromedriver
-    DRIVER_PATH = '/path/to/chromedriver'
+    if pChoice == "Campus":
+        newrankList = [
+    "Aurora University",
+    "Baylor University",
+    "Berry College",
+    "Denison University",
+    "Duke University",
+    "Flagler College",
+    "Georgia Institute of Technology",
+    "Harvard University",
+    "Indiana University—Bloomington",
+    "Kenyon College",
+    "Mercer University",
+    "Pepperdine University",
+    "Princeton University",
+    "Salve Regina University",
+    "San Diego State University",
+    "Spelman College",
+    "Stanford University",
+    "Swarthmore College",
+    "Texas Christian University",
+    "University of Colorado Boulder",
+    "University of Notre Dame",
+    "University of Vermont",
+    "University of Virginia",
+    "University of Washington",
+    "Villanova University"]
 
-    # Initialize the Chrome driver
-    driver = webdriver.Chrome()
+    elif pChoice == "Diversity":
+        newrankList = [
+    "Andrews University",
+    "Johns Hopkins University",
+    "Stanford University",
+    "University of San Francisco",
+    "University of Hawaii at Hilo",
+    "University of Nevada--Las Vegas",
+    "New York University",
+    "Seattle University",
+    "University of Hawaii at Manoa",
+    "University of Maryland Baltimore County",
+    "University of Massachusetts--Boston",
+    "George Mason University",
+    "Harvard University",
+    "Rice University",
+    "Rutgers University--Newark",
+    "University of California--Los Angeles",
+    "University of Chicago",
+    "University of Southern California",
+    "Yale University",
+    "California Institute of Technology",
+    "Massachusetts Institute of Technology",
+    "New Jersey Institute of Technology",
+    "Rutgers University--Camden",
+    "San Francisco State University",
+    "Seattle Pacific University",
+    "University of California, Santa Cruz",
+    "Virginia Commonwealth University",
+    "Brown University",
+    "Cornell University",
+    "Emory University",
+    "Georgia State University",
+    "Northwestern University",
+    "Nova Southeastern University",
+    "Texas Woman's University",
+    "University at Albany--SUNY",
+    "University of California, Davis",
+    "University of Houston",
+    "University of Illinois--Chicago",
+    "University of Pennsylvania",
+    "The University of Texas--Arlington",
+    "Azusa Pacific University",
+    "CUNY--City College",
+    "Duke University",
+    "Illinois Institute of Technology",
+    "Loyola Marymount University",
+    "Marymount University",
+    "Princeton University",
+    "Roosevelt University",
+    "Rutgers University--New Brunswick",
+    "Santa Clara University",
+    "University of California, San Diego",
+    "University of California, Santa Barbara",
+    "University of North Texas",
+    "The University of Texas--Austin",
+    "University of the Pacific",
+    "Boston University",
+    "Carnegie Mellon University",
+    "Case Western Reserve University",
+    "Kean University",
+    "Lamar University"]
 
-    query2 = "USNews 2024/25 Best Colleges for major in " + pChoice
+    elif pChoice == "Food":
+        newrankList = ["Bowdoin College", "Cornell University", "Duke University", "Hendrix College", "James Madison University", "University of Massachusetts--Amherst", "University of Oregon", "University of San Diego", "University of South Carolina", "Virginia Tech"]
 
-    for k in search(query2, tld="co.in", num=1, stop=1, pause=2):
-        goodURL2 = k
-
-    # print("Hello: " + goodURL2)
-
-    # Navigate to the URL
-    selURL = goodURL2
-
-    """     Major test URLS
-            English: https://www.usnews.com/best-graduate-schools/top-humanities-schools/english-rankings'
-            IE: 'https://www.usnews.com/best-graduate-schools/top-engineering-schools/industrial-engineering-rankings'
-            Biology: 'https://www.usnews.com/best-graduate-schools/top-science-schools/biological-sciences-rankings'
-            Psychology: 'https://www.usnews.com/best-graduate-schools/top-humanities-schools/psychology-rankings'
-
-            MechE: 'https://www.usnews.com/best-colleges/rankings/engineering-doctorate-mechanical?_sort=rank&_sortDirection=asc'
-            Hospitality: 'https://www.usnews.com/best-colleges/hospitality-management-major-5209?_sort=rank&_sortDirection=asc'
-            Econ: 'https://www.usnews.com/best-colleges/rankings/economics-overall?_sort=rank&_sortDirection=asc'
-        """
-    driver.get(selURL)
-
-    # TODO Might have to alter for different computers--------------------------------------------------
-    time.sleep(5)
-
-    # Output full page HTML
-    # print(driver.page_source)
-    ut = driver.page_source
-    t = str(ut)
-    # print(t)
-
-    # Determmines if page is table or traditional rank...determines which method to use
-    # Each school's score reflects its average rating on a scale from 1 (marginal) to 5 (outstanding)
-    firstmatch = re.search("Span-sc-19wk4id-0 gqvMPj", t)
-    # print("firstmatch:")
-    # print(firstmatch)
-    if firstmatch != None:
-
-        # Method 1 (table style 0-5.0 rankings)---------------------------------------------------------------------------------------------
-        x = firstmatch
-        print(x)
-
-        nx = str(x)
-        # find first index full number
-        firstin = ""
-        nxi = 24
-        while nxi < 30:
-            firstin = firstin + nx[nxi]
-            nxi += 1
-        firstinint = int(firstin)
-        print(firstinint)
-        endii = firstinint + 40000
-
-        # New string starting at first school to last loaded school (still ~150,000 characters)
-        newt = t[firstinint:endii]
-        print(newt)
-
-        # Now parse string using beautifulsoup
-        newrankList = []
-
-        soup = BeautifulSoup(newt, 'html.parser')
-        j = soup.find_all('div', class_="Box-w0dun1-0 bihhZB")
-        print(j)
-        for element in j:
-            tempej = element['name']
-
-            # print(tempej)
-            newrankList.append(tempej)
-
-        # Special formatting cases
-        for elemt in newrankList:
-            # TODO not picking up 3/2
-            if elemt == 'columbia-university':
-                elemt = elemt + '-in-the-city-of-new-york'
-
-            if elemt == "university-of-michigan":
-                elemt = elemt + "-ann-arbor"
-
-            if elemt == "university-of-virginia":
-                elemt = elemt + "-main-campus"
-
-            if elemt == "university-of-texas-at-austin":
-                elemt = "the-university-of-texas-at-austin"
-
-        print(newrankList)
-
+    elif pChoice == "Internships":
+        newrankList = [
+    "Northeastern University",
+    "Drexel University",
+    "Berea College",
+    "Georgia Institute of Technology",
+    "University of Cincinnati",
+    "Rochester Institute of Technology",
+    "Massachusetts Institute of Technology",
+    "Purdue University--Main Campus",
+    "Carnegie Mellon University",
+    "Elon University",
+    "Clemson University",
+    "Duke University",
+    "Cornell University",
+    "Agnes Scott College",
+    "Arizona State University",
+    "Embry-Riddle Aeronautical University -- Daytona Beach",
+    "Harvard University",
+    "Worcester Polytechnic Institute",
+    "American University",
+    "Endicott College",
+    "George Mason University",
+    "Kettering University"]
+    elif pChoice == "Study Abroad":
+        newrankList = [
+    "New York University",
+    "Elon University",
+    "Middlebury College",
+    "American University",
+    "Georgetown University",
+    "Agnes Scott College",
+    "Goucher College",
+    "Michigan State University",
+    "Syracuse University",
+    "Kalamazoo College",
+    "Duke University",
+    "Pepperdine University",
+    "Dartmouth College",
+    "Macalester College",
+    "Northeastern University",
+    "Arcadia University",
+    "St. Olaf College",
+    "Abilene Christian University",
+    "Boston College",
+    "Boston University",
+    "Indiana University--Bloomington",
+    "Centre College",
+    "Texas A&M University",
+    "Butler University",
+    "Carleton College",
+    "The University of Texas--Austin",
+    "Dickinson College",
+    "George Washington University",
+    "Georgia State University",
+    "University of Michigan--Ann Arbor"]
 
     else:
-        # Method 2 (traditional rank boxes)------------------------------------------------
-        # y = re.search("List__ListItem-rhf5no-1 jYdEtR", t)
-        newrankList = []
+        # Set the path to the Chromedriver
+        DRIVER_PATH = '/path/to/chromedriver'
 
-        soup = BeautifulSoup(t, 'html.parser')
-        j = soup.find_all('li', class_="List__ListItem-rhf5no-1 jYdEtR")
-        # print(j)
-        for element in j:
-            tempej2t = element.get_text()
+        # Initialize the Chrome driver
+        driver = webdriver.Chrome()
 
-            # print(tempej2t)
-            char = "("
-            if char in tempej2t:
-                charind = tempej2t.index(char)
-                # print(charind)
-                tempej2 = tempej2t[:charind - 1]
-            else:
-                tempej2 = tempej2t
+        query2 = "USNews 2024/25 Best Colleges for major in " + pChoice
 
-            newrankList.append(tempej2)
+        for k in search(query2, tld="co.in", num=1, stop=1, pause=2):
+            goodURL2 = k
 
-        # print(newrankList)
+        # print("Hello: " + goodURL2)
+
+        # Navigate to the URL
+        selURL = goodURL2
+
+        """     Major test URLS
+                English: https://www.usnews.com/best-graduate-schools/top-humanities-schools/english-rankings'
+                IE: 'https://www.usnews.com/best-graduate-schools/top-engineering-schools/industrial-engineering-rankings'
+                Biology: 'https://www.usnews.com/best-graduate-schools/top-science-schools/biological-sciences-rankings'
+                Psychology: 'https://www.usnews.com/best-graduate-schools/top-humanities-schools/psychology-rankings'
+
+                MechE: 'https://www.usnews.com/best-colleges/rankings/engineering-doctorate-mechanical?_sort=rank&_sortDirection=asc'
+                Hospitality: 'https://www.usnews.com/best-colleges/hospitality-management-major-5209?_sort=rank&_sortDirection=asc'
+                Econ: 'https://www.usnews.com/best-colleges/rankings/economics-overall?_sort=rank&_sortDirection=asc'
+            """
+        driver.get(selURL)
+
+        # TODO Might have to alter for different computers--------------------------------------------------
+        time.sleep(5)
+
+        # Output full page HTML
+        # print(driver.page_source)
+        ut = driver.page_source
+        t = str(ut)
+        # print(t)
+
+        # Determmines if page is table or traditional rank...determines which method to use
+        # Each school's score reflects its average rating on a scale from 1 (marginal) to 5 (outstanding)
+        firstmatch = re.search("Span-sc-19wk4id-0 gqvMPj", t)
+        # print("firstmatch:")
+        # print(firstmatch)
+        if firstmatch != None:
+
+            # Method 1 (table style 0-5.0 rankings)---------------------------------------------------------------------------------------------
+            x = firstmatch
+            print(x)
+
+            nx = str(x)
+            # find first index full number
+            firstin = ""
+            nxi = 24
+            while nxi < 30:
+                firstin = firstin + nx[nxi]
+                nxi += 1
+            firstinint = int(firstin)
+            print(firstinint)
+            endii = firstinint + 40000
+
+            # New string starting at first school to last loaded school (still ~150,000 characters)
+            newt = t[firstinint:endii]
+            print(newt)
+
+            # Now parse string using beautifulsoup
+            newrankList = []
+
+            soup = BeautifulSoup(newt, 'html.parser')
+            j = soup.find_all('div', class_="Box-w0dun1-0 bihhZB")
+            print(j)
+            for element in j:
+                tempej = element['name']
+
+                # print(tempej)
+                newrankList.append(tempej)
+
+            # Special formatting cases
+            for elemt in newrankList:
+                # TODO not picking up 3/2
+                if elemt == 'columbia-university':
+                    elemt = elemt + '-in-the-city-of-new-york'
+
+                if elemt == "university-of-michigan":
+                    elemt = elemt + "-ann-arbor"
+
+                if elemt == "university-of-virginia":
+                    elemt = elemt + "-main-campus"
+
+                if elemt == "university-of-texas-at-austin":
+                    elemt = "the-university-of-texas-at-austin"
+
+            print(newrankList)
+
+
+        else:
+            # Method 2 (traditional rank boxes)------------------------------------------------
+            # y = re.search("List__ListItem-rhf5no-1 jYdEtR", t)
+            newrankList = []
+
+            soup = BeautifulSoup(t, 'html.parser')
+            j = soup.find_all('li', class_="List__ListItem-rhf5no-1 jYdEtR")
+            # print(j)
+            for element in j:
+                tempej2t = element.get_text()
+
+                # print(tempej2t)
+                char = "("
+                if char in tempej2t:
+                    charind = tempej2t.index(char)
+                    # print(charind)
+                    tempej2 = tempej2t[:charind - 1]
+                else:
+                    tempej2 = tempej2t
+
+                newrankList.append(tempej2)
+
+            # print(newrankList)
+
+            # It's a good practice to close the browser when done
+            driver.quit()
 
     # List Comprehension to convert all to lowercase
     newrankList = [x.lower() for x in newrankList]
@@ -1145,8 +1300,7 @@ def usNews(pChoice, pImportance):
 
     print(newrankList)
 
-    # It's a good practice to close the browser when done
-    driver.quit()
+
 
 
 
@@ -1879,6 +2033,7 @@ def results():
 
     finalList = []
     #Intended major----------------
+    #TODO 3/4 Duplicates of all colleges on list occur
     try:
         intendMajorNameU = intendMajorName
         intendMajorIMU = intendMajorIM
@@ -1892,12 +2047,29 @@ def results():
         print("[]Intend Major not Called in U")
         pass
 
-    #Food---------------------------
+    #Shared PR and USnews attributes---------------------------
+    print("importanceList: v")
+    print(importanceList)
 
+    # 3/2 Should be 3-campus 5-diversity 7-food       10-internships public 11-internships private
+    campusU = importanceList[2]
+    diversityU = importanceList[4]
+    foodU = importanceList[6]
+    internU1 = importanceList[9]
+    internU2 = importanceList[10]
 
+    if campusU != 0:
+        usNews("Campus", campusU)
+    if diversityU != 0:
+        usNews("Diversity", diversityU)
+    if foodU != 0:
+        usNews("Food", foodU)
 
+    if internU1 != 0:
+        usNews("Internships", internU1)
+    elif internU2 != 0:
+        usNews("Internships", internU2)
 
-    #Now for all USNews Attributes-----------------------------------------------------------------------------------
 
 
 
