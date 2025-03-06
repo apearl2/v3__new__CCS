@@ -1289,8 +1289,11 @@ def usNews(pChoice, pImportance):
 
             # print(newrankList)
 
-            # It's a good practice to close the browser when done
-            driver.quit()
+    # It's a good practice to close the browser when done
+    try:
+        driver.quit()
+    except:
+        pass
 
     # List Comprehension to convert all to lowercase
     newrankList = [x.lower() for x in newrankList]
@@ -2014,6 +2017,18 @@ def results():
     #return render_template('test.html', testV = reportfinalListC)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
     #/////////////////////////////////////////////////////////////////////////////////////////////
     #Still to do --- all attributes link to front end, including those that already exist (like in princetonReview function)
 
@@ -2071,7 +2086,28 @@ def results():
         usNews("Internships", internU2)
 
 
+    #Unique USNews Attributes----------------------------------------
+    print("Latest ultiStr: " + ultiStr)
 
+    #Now find Q and X in ultiStr
+    #Study Abroad
+    QstudyI = ultiStr.find("Q")
+    if QstudyI != -1:
+        try:
+            Qim = int(ultiStr[QstudyI + 3])
+        except:
+            Qim = 0
+        if Qim != 0:
+            usNews("Study Abroad", Qim)
+
+    XexpI = ultiStr.find("X")
+    if XexpI != -1:
+        try:
+            Xim = int(ultiStr[XexpI + 3])
+        except:
+            Xim = 0
+        if Xim != 0:
+            usNews("Study Abroad", Xim)
 
     #Joins USNews (reportfinalListU) with reportfinalListC-----------------------------------------------------------
 
