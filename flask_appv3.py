@@ -589,6 +589,42 @@ def averageA(funkName2):
                 pass
 
             i9 += 1
+    elif funkName2 == "U":
+        tfinalList = finalList
+        tfnLLength = len(tfinalList)
+        while i9 < tfnLLength:
+            if type(finalList[i4]) == str:
+                # Adds all the numbers together between first string and second string
+                totalPts = 0
+                i7 = 1
+                # #print(i4)
+
+                while i7 < i4:
+                    totalPts += int(finalList[i7])
+                    i7 += 1
+                # #print(totalPts)
+                totalAvgPts = totalPts / numCcalls
+                totalAvgPts = round(totalAvgPts, 2)
+
+                reportfinalListU.append(finalListCollegesOnlyC[i8])
+                reportfinalListU.append(totalAvgPts)
+                # #print(reportfinalList)
+
+                del finalList[0]
+                while type(finalList[0]) != str:
+                    del finalList[0]
+
+                # #print(finalList)
+
+                i8 += 1
+                i4 = 1
+            else:
+                i4 += 1
+
+                pass
+
+            i9 += 1
+
 
 #Function to combines reportfinalListP and reportfinalListC
 def joinA():
@@ -1170,10 +1206,44 @@ def usNews(pChoice, pImportance):
     "George Washington University",
     "Georgia State University",
     "University of Michigan--Ann Arbor"]
+    elif pChoice == "Service Learning":
+        newrankList = ["Elon University",
+    "University of South Carolina",
+    "Agnes Scott College",
+    "Georgia State University",
+    "Amherst College",
+    "Tulane University",
+    "Berea College",
+    "Northeastern University",
+    "Baylor University",
+    "Abilene Christian University",
+    "Brown University",
+    "Georgetown University",
+    "Vanderbilt University",
+    "Purdue University--Main Campus",
+    "Cornell University",
+    "Stanford University",
+    "Berry College",
+    "Portland State University",
+    "Case Western Reserve University",
+    "Warren Wilson College",
+    "Fordham University",
+    "Gonzaga University",
+    "Furman University",
+    "University of Notre Dame",
+    "Carleton College",
+    "Carnegie Mellon University",
+    "Yale University",
+    "Auburn University"]
 
     else:
         # Set the path to the Chromedriver
         DRIVER_PATH = '/path/to/chromedriver'
+
+        '''
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument("--headless")
+        driver = webdriver.Chrome(options=chrome_options)'''
 
         # Initialize the Chrome driver
         driver = webdriver.Chrome()
@@ -1206,6 +1276,10 @@ def usNews(pChoice, pImportance):
         # Output full page HTML
         # print(driver.page_source)
         ut = driver.page_source
+
+        #3/6    ????
+        driver.close()
+
         t = str(ut)
         # print(t)
 
@@ -2075,16 +2149,20 @@ def results():
 
     if campusU != 0:
         usNews("Campus", campusU)
+        listA(2, "C")
     if diversityU != 0:
         usNews("Diversity", diversityU)
+        listA(3, "C")
     if foodU != 0:
         usNews("Food", foodU)
+        listA(4, "C")
 
     if internU1 != 0:
         usNews("Internships", internU1)
+        listA(5, "C")
     elif internU2 != 0:
         usNews("Internships", internU2)
-
+        listA(5, "C")
 
     #Unique USNews Attributes----------------------------------------
     print("Latest ultiStr: " + ultiStr)
@@ -2092,6 +2170,7 @@ def results():
     #Now find Q and X in ultiStr
     #Study Abroad
     QstudyI = ultiStr.find("Q")
+    print("QstudyI: " + str(QstudyI))
     if QstudyI != -1:
         try:
             Qim = int(ultiStr[QstudyI + 3])
@@ -2099,6 +2178,7 @@ def results():
             Qim = 0
         if Qim != 0:
             usNews("Study Abroad", Qim)
+            listA(6, "C")
 
     XexpI = ultiStr.find("X")
     if XexpI != -1:
@@ -2107,7 +2187,15 @@ def results():
         except:
             Xim = 0
         if Xim != 0:
-            usNews("Study Abroad", Xim)
+            usNews("Service Learning", Xim)
+            listA(7, "C")
+
+    print("Last finalList: ")
+    print(finalList)
+
+    #Average usNews finalList together
+    averageA()
+
 
     #Joins USNews (reportfinalListU) with reportfinalListC-----------------------------------------------------------
 
