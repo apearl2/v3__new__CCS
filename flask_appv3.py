@@ -1237,6 +1237,7 @@ def usNews(pChoice, pImportance):
     "Auburn University"]
 
     else:
+        #3/10 realized: now just goes to nat'l university rankings if major not selected
         # Set the path to the Chromedriver
         DRIVER_PATH = '/path/to/chromedriver'
 
@@ -2120,7 +2121,11 @@ def results():
                 -Study abroad
                 """
 
+    #Clear lists ? ?  3/10
     finalList = []
+    finalListCollegesOnlyC = []
+    numCcalls = 0
+
     #Intended major----------------
     #TODO 3/4 Duplicates of all colleges on list occur
     try:
@@ -2131,6 +2136,7 @@ def results():
         usNews(intendMajorNameU, intendMajorIMU)
         listA(1, "C")
 
+        numCcalls += 1
         print(finalList)
     except:
         print("[]Intend Major not Called in U")
@@ -2150,19 +2156,24 @@ def results():
     if campusU != 0:
         usNews("Campus", campusU)
         listA(2, "C")
+        numCcalls += 1
     if diversityU != 0:
         usNews("Diversity", diversityU)
         listA(3, "C")
+        numCcalls += 1
     if foodU != 0:
         usNews("Food", foodU)
         listA(4, "C")
+        numCcalls += 1
 
     if internU1 != 0:
         usNews("Internships", internU1)
         listA(5, "C")
+        numCcalls += 1
     elif internU2 != 0:
         usNews("Internships", internU2)
         listA(5, "C")
+        numCcalls += 1
 
     #Unique USNews Attributes----------------------------------------
     print("Latest ultiStr: " + ultiStr)
@@ -2179,6 +2190,7 @@ def results():
         if Qim != 0:
             usNews("Study Abroad", Qim)
             listA(6, "C")
+            numCcalls += 1
 
     XexpI = ultiStr.find("X")
     if XexpI != -1:
@@ -2189,12 +2201,17 @@ def results():
         if Xim != 0:
             usNews("Service Learning", Xim)
             listA(7, "C")
+            numCcalls += 1
 
     print("Last finalList: ")
     print(finalList)
 
     #Average usNews finalList together
-    averageA()
+    #3/10: / / / / / / / / / / / / / / /  / /
+    print(finalListCollegesOnlyC)
+    averageA("U")
+
+    print(reportfinalListU)
 
 
     #Joins USNews (reportfinalListU) with reportfinalListC-----------------------------------------------------------
