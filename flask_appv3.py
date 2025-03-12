@@ -32,6 +32,7 @@ finalList = []
 finalListCollegesOnlyP = []
 finalListCollegesOnlyC = []
 finalListCollegesOnlyU = []
+finalListCollegesOnlyPC = []
 reportfinalListP = []
 reportfinalListC = []
 reportfinalListU = []
@@ -627,81 +628,129 @@ def averageA(funkName2):
 
 
 #Function to combines reportfinalListP and reportfinalListC
-def joinA():
+def joinA(joins):
     global finalListCollegesOnlyC
     global finalListCollegesOnlyP
+    global finalListCollegesOnlyPC
+    global finalListCollegesOnlyU
+    global reportfinalListU
     global reportfinalListP
     global reportfinalListC
 
-    # -------------------------------------------------------------------------------
-    # First, Goes through all colleges in finalListCollegesOnlyC and divides them by 2 if they do not exist in P list
-    i = 0
-    while i < (len(reportfinalListC) - 1):
-        now = reportfinalListC[i]
+    if joins == "PC":
+        # -------------------------------------------------------------------------------
+        # First, Goes through all colleges in finalListCollegesOnlyC and divides them by 2 if they do not exist in P list
+        i = 0
+        while i < (len(reportfinalListC) - 1):
+            now = reportfinalListC[i]
 
-        try:
-            trialI = finalListCollegesOnlyP.index(now)
-        except ValueError:
-            reportfinalListC[i + 1] /= 2
+            try:
+                trialI = finalListCollegesOnlyP.index(now)
+            except ValueError:
+                reportfinalListC[i + 1] /= 2
 
-        i += 2
+            i += 2
 
-    #Loop through all colleges in final P list (e1)
-    e1 = 0
-    e2 = 0
-    alreadyExists = False
-    while e1 < len(reportfinalListP):
-        alreadyExists = False
-        ##print("\n" + reportfinalListP[e1])
-        #Loops through all colleges in final CF list (e2)
+        # Loop through all colleges in final P list (e1)
+        e1 = 0
         e2 = 0
-        while e2 < len(reportfinalListC):
-            ##print(reportfinalListC[e2])
-            if reportfinalListP[e1] == reportfinalListC[e2]:
-                #New point value for found college = existing value + value from P list    all over 2
-                reportfinalListC[e2 + 1] = (reportfinalListC[e2 + 1] + reportfinalListP[e1 + 1])/2
+        alreadyExists = False
+        while e1 < len(reportfinalListP):
+            alreadyExists = False
+            ##print("\n" + reportfinalListP[e1])
+            # Loops through all colleges in final CF list (e2)
+            e2 = 0
+            while e2 < len(reportfinalListC):
+                ##print(reportfinalListC[e2])
+                if reportfinalListP[e1] == reportfinalListC[e2]:
+                    # New point value for found college = existing value + value from P list    all over 2
+                    reportfinalListC[e2 + 1] = (reportfinalListC[e2 + 1] + reportfinalListP[e1 + 1]) / 2
 
-                alreadyExists = True
-                break
+                    alreadyExists = True
+                    break
 
-            e2 += 2
+                e2 += 2
 
-        if alreadyExists == False:
-            reportfinalListC.append(reportfinalListP[e1])
-            reportfinalListC.append((reportfinalListP[e1 + 1])/2)
-        else:
-            pass
+            if alreadyExists == False:
+                reportfinalListC.append(reportfinalListP[e1])
+                reportfinalListC.append((reportfinalListP[e1 + 1]) / 2)
+            else:
+                pass
 
-        e1 += 2
+            e1 += 2
+    if joins == "UPC":
+        #TODO 3/12 make finalListCollegesOnlyU
+
+        # -------------------------------------------------------------------------------
+        # First, Goes through all colleges in finalListCollegesOnlyU and divides them by 2 if they do not exist in PC list
+        i = 0
+        while i < (len(reportfinalListU) - 1):
+            now = reportfinalListU[i]
+
+            try:
+                trialI = finalListCollegesOnlyPC.index(now)
+            except ValueError:
+                reportfinalListU[i + 1] /= 2
+
+            i += 2
+
+        # Loop through all colleges in final PC list (e1)
+        e1 = 0
+        e2 = 0
+        alreadyExists = False
+        while e1 < len(reportfinalListC):
+            alreadyExists = False
+            ##print("\n" + reportfinalListP[e1])
+            # Loops through all colleges in final U list (e2)
+            e2 = 0
+            while e2 < len(reportfinalListU):
+                ##print(reportfinalListC[e2])
+                if reportfinalListC[e1] == reportfinalListU[e2]:
+                    # New point value for found college = existing value + value from P list    all over 2
+                    reportfinalListU[e2 + 1] = (reportfinalListU[e2 + 1] + reportfinalListC[e1 + 1]) / 2
+
+                    alreadyExists = True
+                    break
+
+                e2 += 2
+
+            if alreadyExists == False:
+                reportfinalListU.append(reportfinalListC[e1])
+                reportfinalListU.append((reportfinalListC[e1 + 1]) / 2)
+            else:
+                pass
+
+            e1 += 2
 
 #Function sorts reportfinalListC into order based on total points
 def bestSort():
-    global reportfinalListC
+    global reportfinalListU
     global customList
+    #3/12 -> bestSort changed, now used reportfinalListU
 
     customList = []
 
     e3 = 1
-    largest = reportfinalListC[1]
+    largest = reportfinalListU[1]
 
     #Main loop that finds top 10 of rfList
     i = 0
-    rflC = (len(reportfinalListC) / 2)
+    rflC = (len(reportfinalListU) / 2)
     while i < rflC:
         #Resets
-        largest = reportfinalListC[1]
+        largest = reportfinalListU[1]
         e3 = 1
 
         #Finds largest integer in list and then #prints the corresponding school value
-        while e3 < len(reportfinalListC):
-            if reportfinalListC[e3] > largest:
-                largest  = reportfinalListC[e3]
+        while e3 < len(reportfinalListU):
+            if reportfinalListU[e3] > largest:
+                largest  = reportfinalListU[e3]
 
             e3 += 2
 
-        realI = reportfinalListC.index(largest)
+        realI = reportfinalListU.index(largest)
 
-        topSchool = reportfinalListC[realI - 1]
+        topSchool = reportfinalListU[realI - 1]
 
         #Appends to final custom list
         ntopSchool = topSchool.replace("-", " ")
@@ -710,8 +759,8 @@ def bestSort():
         customList = [x.title() for x in customList]
 
         #Deletes elements from rfList
-        del reportfinalListC[realI]
-        del reportfinalListC[realI - 1]
+        del reportfinalListU[realI]
+        del reportfinalListU[realI - 1]
 
         i += 1
 
@@ -1577,6 +1626,8 @@ def results():
     global reportfinalListP
     global finalListCollegesOnlyP
     global finalListCollegesOnlyC
+    global finalListCollegesOnlyU
+    global finalListCollegesOnlyPC
     global stl
     global numPcalls
     global numCcalls
@@ -1914,6 +1965,9 @@ def results():
 
     # averageA for CF calls
     ##print(finalListCollegesOnlyC)
+    #3/12
+    tempfinalListCollegesOnlyC = finalListCollegesOnlyC
+
     averageA("C")
 
     #print(reportfinalListC)
@@ -2017,7 +2071,7 @@ def results():
     print(reportfinalListP)
 
     #Join P and CF list together-----------------------------------------------------------
-    joinA()
+    joinA("PC")
     print(reportfinalListC)
 
     #Deletes Southern New Hampshire University Case
@@ -2208,15 +2262,28 @@ def results():
 
     #Average usNews finalList together
     #3/10: / / / / / / / / / / / / / / /  / /
-    print(finalListCollegesOnlyC)
     averageA("U")
+    finalListCollegesOnlyU = finalListCollegesOnlyC
+    #finalListCollegesOnlyC = tempfinalListCollegesOnlyC
+    #Get a final list of colleges only that matches reportfinalListC
+    finalListCollegesOnlyPC = []
+    iflcopc = 0
+    while iflcopc < len(reportfinalListC):
+        finalListCollegesOnlyPC.append(reportfinalListC[iflcopc])
+        iflcopc += 2
 
     print(reportfinalListU)
+    print(finalListCollegesOnlyU)
+    print(reportfinalListC)
+    print(finalListCollegesOnlyPC)
 
+    #3/12 -> still has duplicates of intended major schools in reportfinalListU
 
     #Joins USNews (reportfinalListU) with reportfinalListC-----------------------------------------------------------
-
-
+    joinA("UPC")
+    print("----------------------")
+    print(reportfinalListU)
+    #3/12 -> reportfinalListU includes 181 colleges (probably about 5-10 duplicates)
 
     #Gets top 10 schools   ... or top 20 schools---------------------------------------------------------------
     bestSort()
