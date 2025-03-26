@@ -190,6 +190,7 @@ aRateDict = {'University Of Pennsylvania': 6,
     "Santa Clara University": 54,
     "Colgate University": 17,
     "Georgia Institute Of Technology": 16,
+    "University Of Rochester": 36,
     "El Centro College": 2, 'Elon University': 78, 'Bowdoin College': 9, 'Berea College': 33, 'Baylor University': 57, 'American University': 64, 'Lafayette College': 41, 'Berry College': 70, 'University Of San Francisco': 71, 'Middlebury College': 13, 'James Madison University': 86, 'Denison University': 28, 'Salve Regina University': 73, 'Aurora University': 86, 'Andrews University': 82, 'Syracuse University': 59, 'Abilene Christian University': 70, 'Hendrix College': 68, 'Georgia State University': 52, 'University Of Hawaii At Hilo': 92, 'University Of Cincinnati': 85, 'Flagler College': 74, 'University Of Nevada Las Vegas': 83, 'Rochester Institute Of Technology': 71, 'Goucher College': 82, 'Seattle University': 82, 'University Of San Diego': 53, 'Franklin University': 5, 'The Scripps Research Institute': 30, 'Indiana University—Bloomington': 85, 'University Of Hawaii At Manoa': 70, 'Swarthmore College': 8, 'University Of California San Francisco': 52, 'Kenyon College': 37, 'University Of Maryland Baltimore County': 81, 'Kalamazoo College': 80, 'Texas Christian University': 54, 'Reed College': 44, 'Mercer University': 75, 'University Of Massachusetts Boston': 79, 'University Of Denver': 64, 'University Of New Hampshire Main Campus': 87, 'High Point University': 80, 'Pitzer College': 18, 'Macalester College': 31, 'Gonzaga University': 76, 'Wabash College': 62, 'United States Naval Academy': 8, 'Wellesley College': 16, 'Mount Holyoke College': 52, 'Rutgers University Newark': 77, 'Spelman College': 51, 'Embry Riddle Aeronautical University   Daytona Beach': 72, 'Arcadia University': 82, 'Tulane University Of Louisiana': 10, 'Loyola University Chicago': 77, 'St. Olaf College': 47, 'Scripps College': 30, 'College Of The Atlantic': 61, 'University Of Dayton': 81, 'Carleton College': 18, 'Worcester Polytechnic Institute': 60, 'Portland State University': 98, 'Cooper Union For The Advancement Of Science And Art': 15, 'Bates College': 17, 'Rhodes College': 57, 'Michigan Technological University': 86, 'Hamilton College': 14, 'Washington And Lee University': 19, 'Lewis And Clark College': 79, 'Simmons College': 84, 'Drury University': 65, 'Case Western Reserve University': 30, 'Haverford College': 18, 'Florida Southern College': 61, 'Emerson College': 45, 'City University Of Seattle': 32, 'St Lawrence University': 57, 'Wesleyan University': 19, 'University Of Cincinnati Main Campus': 85, 'Juniata College': 74, 'Wheaton College Illinois': 86, 'Endicott College': 77, 'Warren Wilson College': 77, 'Rose Hulman Institute Of Technology': 77, 'Suffolk University': 88, 'Davidson College': 18, 'Fordham University': 58, 'Muhlenberg College': 68, 'Marquette University': 86, 'Vassar College': 20, 'St Johns University New York': 85, 'Miami University Oxford': 89, 'Austin College': 43, 'Hobart William Smith Colleges': 67, 'New Jersey Institute Of Technology': 69, 'Kettering University': 86, 'Centre College': 68, 'Barnard College': 11, 'The College Of Wooster': 61, 'University Of Washington': 53, 'Colby College': 9, 'St Olaf College': 47, 'Gettysburg College': 56, 'University Of Virginia': 21, 'Rutgers University Camden': 79, 'Texas A&M University': 64, 'University Of Puget Sound': 88, 'Skidmore College': 31, 'Oxford College Of Emory University': 20, 'Colorado College': 14, 'California State University Los Angeles': 91, 'Christopher Newport University': 89, 'University Of Richmond': 29, 'San Francisco State University': 93, 'Loyola Marymount University': 46, 'Drew University': 80
 }
 
@@ -262,6 +263,7 @@ sizeDict = { 'University Of Pennsylvania': 9960, 'Harvard University': 5699, 'No
     "Santa Clara University": 5478,
     "Colgate University": 3023,
     "Georgia Institute Of Technology": 14485,
+    "University Of Rochester": 6764,
     "El Centro College": 79000, 'Elon University': 6502, 'Bowdoin College': 1776, 'Berea College': 1487, 'Baylor University': 14145, 'American University': 7453, 'Lafayette College': 2457, 'Berry College': 1982, 'University Of San Francisco': 5572, 'Middlebury College': 2552, 'James Madison University': 18420, 'Denison University': 2252, 'Salve Regina University': 2800, 'Aurora University': 3822, 'Andrews University': 1258, 'Syracuse University': 13832, 'Abilene Christian University': 3297, 'Hendrix College': 1098, 'Georgia State University': 27600, 'University Of Hawaii At Hilo': 9001, 'University Of Cincinnati': 24301, 'Flagler College': 2432, 'University Of Nevada Las Vegas': 19843, 'Rochester Institute Of Technology': 14076, 'Goucher College': 1086, 'Seattle University': 4045, 'University Of San Diego': 5294, 'Franklin University': 1204, 'The Scripps Research Institute': 80001, 'Indiana University—Bloomington': 31632, 'University Of Hawaii At Manoa': 10688, 'Swarthmore College': 1437, 'University Of California San Francisco': 3017, 'Kenyon College': 1610, 'University Of Maryland Baltimore County': 9220, 'Kalamazoo College': 1426, 'Texas Christian University': 9448, 'Reed College': 1338, 'Mercer University': 4219, 'University Of Massachusetts Boston': 10279, 'University Of Denver': 5362, 'University Of New Hampshire Main Campus': 11382, 'High Point University': 4575, 'Pitzer College': 1200, 'Macalester College': 2012, 'Gonzaga University': 4744, 'Wabash College': 845, 'United States Naval Academy': 4594, 'Wellesley College': 2238, 'Mount Holyoke College': 1892, 'Rutgers University Newark': 7974, 'Spelman College': 2588, 'Embry Riddle Aeronautical University   Daytona Beach': 6035, 'Arcadia University': 1769, 'Tulane University Of Louisiana': 7851, 'Loyola University Chicago': 10924, 'St. Olaf College': 2916, 'Scripps College': 1082, 'College Of The Atlantic': 360, 'University Of Dayton': 8314, 'Carleton College': 1918, 'Worcester Polytechnic Institute': 4709, 'Portland State University': 12752, 'Cooper Union For The Advancement Of Science And Art': 901, 'Bates College': 1876, 'Rhodes College': 1788, 'Michigan Technological University': 5294, 'Hamilton College': 1899, 'Washington And Lee University': 1821, 'Lewis And Clark College': 1812, 'Simmons College': 1609, 'Drury University': 1368, 'Case Western Reserve University': 5286, 'Haverford College': 1298, 'Florida Southern College': 3073, 'Emerson College': 3626, 'City University Of Seattle': 2095, 'St Lawrence University': 2249, 'Wesleyan University': 2836, 'University Of Cincinnati Main Campus': 24301, 'Juniata College': 1212, 'Wheaton College Illinois': 2195, 'Endicott College': 2840, 'Warren Wilson College': 742, 'Rose Hulman Institute Of Technology': 1952, 'Suffolk University': 4179, 'Davidson College': 1983, 'Fordham University': 8887, 'Muhlenberg College': 2016, 'Marquette University': 7715, 'Vassar College': 2409, 'St Johns University New York': 10177, 'Miami University Oxford': 16079, 'Austin College': 1086, 'Hobart William Smith Colleges': 1808, 'New Jersey Institute Of Technology': 7389, 'Kettering University': 1597, 'Centre College': 1333, 'Barnard College': 2651, 'The College Of Wooster': 1921, 'University Of Washington': 29350, 'Colby College': 2155, 'St Olaf College': 2916, 'Gettysburg College': 2496, 'University Of Virginia': 16319, 'Rutgers University Camden': 4608, 'Texas A&M University': 49442, 'University Of Puget Sound': 1830, 'Skidmore College': 2510, 'Oxford College Of Emory University': 1500, 'Colorado College': 1886, 'California State University Los Angeles': 19425, 'Christopher Newport University': 4653, 'University Of Richmond': 3137, 'San Francisco State University': 19847, 'Loyola Marymount University': 6383, 'Drew University': 1624
 }
 
@@ -2420,9 +2422,12 @@ def filter():
         try:
             maxstart = newatlf[maxis]
         except:
-            fsMax = int(maxfinal)
-            break
+            try:
+                fsMax = int(maxfinal)
+            except:
+                fsMax = 70027
 
+            break
         try:
             if maxstart == "&" or (maxstart == "0" and maxis == 9):
                 if maxis == 9:
@@ -2431,7 +2436,7 @@ def filter():
                     try:
                         fsMax = int(maxfinal)
                     except:
-                        fsMax = 27
+                        fsMax = 70027
                 break
             else:
                 maxfinal = maxfinal + maxstart
@@ -2442,7 +2447,7 @@ def filter():
             try:
                 fsMax = int(maxfinal)
             except:
-                fsMax = 27
+                fsMax = 70027
 
             break
 
@@ -2499,6 +2504,19 @@ def filter():
                 eighth = ''
                 ninth = ''
                 tenth = ''
+                eleventh = ''
+                twelfth = ''
+                thirteenth = ''
+                fourteenth = ''
+                fifteenth = ''
+                sixteenth = ''
+                seventeenth = ''
+                eighteenth = ''
+                nineteenth = ''
+                twentieth = ''
+
+                #3/25 adding 10 or 20 option into filter list
+                # Gets top 10 schools   ... or top 20 schools---------------------------------------------------------------
 
                 first = filterList[0]
                 second = filterList[1]
@@ -2511,6 +2529,7 @@ def filter():
                 ninth = filterList[8]
                 tenth = filterList[9]
 
+                #Cut off 3/25---------------------------------------------------------------------------------------------
                 #Fake list for git commits
                 fakelist = []
                 #2/10 renamed
@@ -2533,6 +2552,8 @@ def filter():
                 #print(sizeDict)
 
                 #return render_template('test.html', testV = preattList)
+                #------------------------------------------------------------------
+
 
                 return render_template('filter.html', value1b = first, value2b = second, value3b = third, value4b = fourth, value5b = fifth, value6b = sixth, value7b = seventh, value8b = eighth, value9b = ninth, value10b = tenth, valuepal = preattList)
 
