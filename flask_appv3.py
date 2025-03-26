@@ -2487,9 +2487,17 @@ def filter():
     i = 0
     filterList = []
 
-    while filterListCounter < 15:
+    tenor20 = request.args.get("z", "twenty")
+    if tenor20 == "twenty":
+        flcmax = 19
+    else:
+        flcmax = 9
+
+    print("tenor20: " + str(tenor20))
+
+    while filterListCounter < 25:
         while i < len(customList):
-            if filterListCounter > 9:
+            if filterListCounter > flcmax:
                 # #prints final filtered list
                 #print(filterList)
 
@@ -2517,6 +2525,8 @@ def filter():
 
                 #3/25 adding 10 or 20 option into filter list
                 # Gets top 10 schools   ... or top 20 schools---------------------------------------------------------------
+                print("filterList: ")
+                print(filterList)
 
                 first = filterList[0]
                 second = filterList[1]
@@ -2528,6 +2538,18 @@ def filter():
                 eighth = filterList[7]
                 ninth = filterList[8]
                 tenth = filterList[9]
+
+                if tenor20 == "twenty":
+                    eleventh = filterList[10]
+                    twelfth = filterList[11]
+                    thirteenth = filterList[12]
+                    fourteenth = filterList[13]
+                    fifteenth = filterList[14]
+                    sixteenth = filterList[15]
+                    seventeenth = filterList[16]
+                    eighteenth = filterList[17]
+                    nineteenth = filterList[18]
+                    twentieth = filterList[19]
 
                 #Cut off 3/25---------------------------------------------------------------------------------------------
                 #Fake list for git commits
@@ -2553,9 +2575,16 @@ def filter():
 
                 #return render_template('test.html', testV = preattList)
                 #------------------------------------------------------------------
-
-
-                return render_template('filter.html', value1b = first, value2b = second, value3b = third, value4b = fourth, value5b = fifth, value6b = sixth, value7b = seventh, value8b = eighth, value9b = ninth, value10b = tenth, valuepal = preattList)
+                if tenor20 == "twenty":
+                    return render_template('filter.html', value1b=first, value2b=second, value3b=third, value4b=fourth,
+                                           value5b=fifth, value6b=sixth, value7b=seventh, value8b=eighth, value9b=ninth,
+                                           value10b=tenth, value11b="11. " + eleventh, value12b="12. " + twelfth,
+                                           value13b="13. " + thirteenth, value14b="14. " + fourteenth,
+                                           value15b="15. " + fifteenth, value16b="16. " + sixteenth,
+                                           value17b="17. " + seventeenth, value18b="18. " + eighteenth,
+                                           value19b="19. " + nineteenth, value20b="20. " + twentieth, valuepal = preattList)
+                else:
+                    return render_template('filter.html', value1b = first, value2b = second, value3b = third, value4b = fourth, value5b = fifth, value6b = sixth, value7b = seventh, value8b = eighth, value9b = ninth, value10b = tenth, valuepal = preattList)
 
             else:
                 # Then search google for acceptance rate of each college on customList
