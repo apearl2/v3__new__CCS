@@ -766,6 +766,11 @@ def bestSort():
 
         i += 1
 
+        #4/1 Remove UC Irvine-Cal Poly Bug
+        if 'University Of California Irvinecalifornia Polytechnic State University San Luis Obispo' in customList:
+            cli = customList.index('University Of California Irvinecalifornia Polytechnic State University San Luis Obispo')
+            customList[cli] = 'University Of California Irvine'
+
         #3/17
         print("customList:")
         print(customList)
