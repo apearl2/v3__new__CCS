@@ -1640,12 +1640,24 @@ def next():
     #print(stl)
 
     #Increments stl to build up atl
-    #3/2 change for in PyCharm
-    i = 7
+    #3/2 change for in PyCharm------------------------
+    #PyCharm V
+    #i = 21
+
+    #iscollegesearch.com
+    #i = 31
+
+    #iscollegesearch.pythonanywhere.com
+    #Active __________________________
+    i = 46
+
     atl = ''
     while i < len(stl):
         atl = atl + stl[i]
         i += 1
+
+    #Check if underscore will be found right on right mode
+    print("atl: " + atl)
 
     #11/20 - test inputStr errors 621
     return render_template('in_progress.html', valueip = atl)
@@ -1725,16 +1737,18 @@ def results():
     atlCheck = ""
 
     try:
-        underscore = atl[26]
+        underscore = atl[12]
         #print("tried")
         #In PA: underscore = atl[43]
     except:
+        '''
         try:
             underscore = stl[43]
-        except:
-            atl = 'https://www.iscollegesearch.com/calculate?s_=Business_&b_=5&wut_=Economics&z_=5&c_=5&d_=5&e_=5&x_=5&f_=5&g_=5&h_=5&i_=5&j_=5&k_=5&l_=5&m_=5&C=Business&Z_=5'
-            underscore = atl[43]
-            atlCheck = "..."
+        except:'''
+
+        atl = 'https://www.iscollegesearch.com/calculate?s_=Business_&b_=5&wut_=Economics&z_=5&c_=5&d_=5&e_=5&x_=5&f_=5&g_=5&h_=5&i_=5&j_=5&k_=5&l_=5&m_=5&C=Business&Z_=5'
+        underscore = atl[43]
+        atlCheck = "..."
 
     #return render_template('test.html', testV = checkcount, testV2 = atl)
 
