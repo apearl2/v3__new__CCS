@@ -189,8 +189,11 @@ aRateDict = {'University Of Pennsylvania': 6,
     "Wake Forest University": 25,
     "Santa Clara University": 54,
     "Colgate University": 17,
-    "Georgia Institute Of Technology": 16,
+    "Georgia Institute Of Technology": 2,
     "University Of Rochester": 36,
+    "Austincollege": 2,
+    " Northeasternuniversity": 2,
+    "Hampden Sydney": 2,
     "El Centro College": 2, 'Elon University': 78, 'Bowdoin College': 9, 'Berea College': 33, 'Baylor University': 57, 'American University': 64, 'Lafayette College': 41, 'Berry College': 70, 'University Of San Francisco': 71, 'Middlebury College': 13, 'James Madison University': 86, 'Denison University': 28, 'Salve Regina University': 73, 'Aurora University': 86, 'Andrews University': 82, 'Syracuse University': 59, 'Abilene Christian University': 70, 'Hendrix College': 68, 'Georgia State University': 52, 'University Of Hawaii At Hilo': 92, 'University Of Cincinnati': 85, 'Flagler College': 74, 'University Of Nevada Las Vegas': 83, 'Rochester Institute Of Technology': 71, 'Goucher College': 82, 'Seattle University': 82, 'University Of San Diego': 53, 'Franklin University': 5, 'The Scripps Research Institute': 30, 'Indiana University—Bloomington': 85, 'University Of Hawaii At Manoa': 70, 'Swarthmore College': 8, 'University Of California San Francisco': 52, 'Kenyon College': 37, 'University Of Maryland Baltimore County': 81, 'Kalamazoo College': 80, 'Texas Christian University': 54, 'Reed College': 44, 'Mercer University': 75, 'University Of Massachusetts Boston': 79, 'University Of Denver': 64, 'University Of New Hampshire Main Campus': 87, 'High Point University': 80, 'Pitzer College': 18, 'Macalester College': 31, 'Gonzaga University': 76, 'Wabash College': 62, 'United States Naval Academy': 8, 'Wellesley College': 16, 'Mount Holyoke College': 52, 'Rutgers University Newark': 77, 'Spelman College': 51, 'Embry Riddle Aeronautical University   Daytona Beach': 72, 'Arcadia University': 82, 'Tulane University Of Louisiana': 10, 'Loyola University Chicago': 77, 'St. Olaf College': 47, 'Scripps College': 30, 'College Of The Atlantic': 61, 'University Of Dayton': 81, 'Carleton College': 18, 'Worcester Polytechnic Institute': 60, 'Portland State University': 98, 'Cooper Union For The Advancement Of Science And Art': 15, 'Bates College': 17, 'Rhodes College': 57, 'Michigan Technological University': 86, 'Hamilton College': 14, 'Washington And Lee University': 19, 'Lewis And Clark College': 79, 'Simmons College': 84, 'Drury University': 65, 'Case Western Reserve University': 30, 'Haverford College': 18, 'Florida Southern College': 61, 'Emerson College': 45, 'City University Of Seattle': 32, 'St Lawrence University': 57, 'Wesleyan University': 19, 'University Of Cincinnati Main Campus': 85, 'Juniata College': 74, 'Wheaton College Illinois': 86, 'Endicott College': 77, 'Warren Wilson College': 77, 'Rose Hulman Institute Of Technology': 77, 'Suffolk University': 88, 'Davidson College': 18, 'Fordham University': 58, 'Muhlenberg College': 68, 'Marquette University': 86, 'Vassar College': 20, 'St Johns University New York': 85, 'Miami University Oxford': 89, 'Austin College': 43, 'Hobart William Smith Colleges': 67, 'New Jersey Institute Of Technology': 69, 'Kettering University': 86, 'Centre College': 68, 'Barnard College': 11, 'The College Of Wooster': 61, 'University Of Washington': 53, 'Colby College': 9, 'St Olaf College': 47, 'Gettysburg College': 56, 'University Of Virginia': 21, 'Rutgers University Camden': 79, 'Texas A&M University': 64, 'University Of Puget Sound': 88, 'Skidmore College': 31, 'Oxford College Of Emory University': 20, 'Colorado College': 14, 'California State University Los Angeles': 91, 'Christopher Newport University': 89, 'University Of Richmond': 29, 'San Francisco State University': 93, 'Loyola Marymount University': 46, 'Drew University': 80
 }
 
@@ -262,8 +265,11 @@ sizeDict = { 'University Of Pennsylvania': 9960, 'Harvard University': 5699, 'No
     "Wake Forest University": 5367,
     "Santa Clara University": 5478,
     "Colgate University": 3023,
-    "Georgia Institute Of Technology": 14485,
+    "Georgia Institute Of Technology": 80004,
     "University Of Rochester": 6764,
+    "Austincollege": 80001,
+    " Northeasternuniversity": 80002,
+    "Hampden Sydney": 80003,
     "El Centro College": 79000, 'Elon University': 6502, 'Bowdoin College': 1776, 'Berea College': 1487, 'Baylor University': 14145, 'American University': 7453, 'Lafayette College': 2457, 'Berry College': 1982, 'University Of San Francisco': 5572, 'Middlebury College': 2552, 'James Madison University': 18420, 'Denison University': 2252, 'Salve Regina University': 2800, 'Aurora University': 3822, 'Andrews University': 1258, 'Syracuse University': 13832, 'Abilene Christian University': 3297, 'Hendrix College': 1098, 'Georgia State University': 27600, 'University Of Hawaii At Hilo': 9001, 'University Of Cincinnati': 24301, 'Flagler College': 2432, 'University Of Nevada Las Vegas': 19843, 'Rochester Institute Of Technology': 14076, 'Goucher College': 1086, 'Seattle University': 4045, 'University Of San Diego': 5294, 'Franklin University': 1204, 'The Scripps Research Institute': 80001, 'Indiana University—Bloomington': 31632, 'University Of Hawaii At Manoa': 10688, 'Swarthmore College': 1437, 'University Of California San Francisco': 3017, 'Kenyon College': 1610, 'University Of Maryland Baltimore County': 9220, 'Kalamazoo College': 1426, 'Texas Christian University': 9448, 'Reed College': 1338, 'Mercer University': 4219, 'University Of Massachusetts Boston': 10279, 'University Of Denver': 5362, 'University Of New Hampshire Main Campus': 11382, 'High Point University': 4575, 'Pitzer College': 1200, 'Macalester College': 2012, 'Gonzaga University': 4744, 'Wabash College': 845, 'United States Naval Academy': 4594, 'Wellesley College': 2238, 'Mount Holyoke College': 1892, 'Rutgers University Newark': 7974, 'Spelman College': 2588, 'Embry Riddle Aeronautical University   Daytona Beach': 6035, 'Arcadia University': 1769, 'Tulane University Of Louisiana': 7851, 'Loyola University Chicago': 10924, 'St. Olaf College': 2916, 'Scripps College': 1082, 'College Of The Atlantic': 360, 'University Of Dayton': 8314, 'Carleton College': 1918, 'Worcester Polytechnic Institute': 4709, 'Portland State University': 12752, 'Cooper Union For The Advancement Of Science And Art': 901, 'Bates College': 1876, 'Rhodes College': 1788, 'Michigan Technological University': 5294, 'Hamilton College': 1899, 'Washington And Lee University': 1821, 'Lewis And Clark College': 1812, 'Simmons College': 1609, 'Drury University': 1368, 'Case Western Reserve University': 5286, 'Haverford College': 1298, 'Florida Southern College': 3073, 'Emerson College': 3626, 'City University Of Seattle': 2095, 'St Lawrence University': 2249, 'Wesleyan University': 2836, 'University Of Cincinnati Main Campus': 24301, 'Juniata College': 1212, 'Wheaton College Illinois': 2195, 'Endicott College': 2840, 'Warren Wilson College': 742, 'Rose Hulman Institute Of Technology': 1952, 'Suffolk University': 4179, 'Davidson College': 1983, 'Fordham University': 8887, 'Muhlenberg College': 2016, 'Marquette University': 7715, 'Vassar College': 2409, 'St Johns University New York': 10177, 'Miami University Oxford': 16079, 'Austin College': 1086, 'Hobart William Smith Colleges': 1808, 'New Jersey Institute Of Technology': 7389, 'Kettering University': 1597, 'Centre College': 1333, 'Barnard College': 2651, 'The College Of Wooster': 1921, 'University Of Washington': 29350, 'Colby College': 2155, 'St Olaf College': 2916, 'Gettysburg College': 2496, 'University Of Virginia': 16319, 'Rutgers University Camden': 4608, 'Texas A&M University': 49442, 'University Of Puget Sound': 1830, 'Skidmore College': 2510, 'Oxford College Of Emory University': 1500, 'Colorado College': 1886, 'California State University Los Angeles': 19425, 'Christopher Newport University': 4653, 'University Of Richmond': 3137, 'San Francisco State University': 19847, 'Loyola Marymount University': 6383, 'Drew University': 1624
 }
 
@@ -1103,6 +1109,8 @@ def cVine(pChoice, pImportance):
             if ultiJ == "university-of-texas-at-austin":
                 ultiJ = "the-university-of-texas-at-austin"
 
+            if ultiJ == "georgia-institute-of-technology":
+                ultiJ = ultiJ + "-main-campus"
 
             newrankList.append(ultiJ)
 
@@ -1123,7 +1131,7 @@ def usNews(pChoice, pImportance):
     "Denison University",
     "Duke University",
     "Flagler College",
-    "Georgia Institute of Technology",
+    "Georgia Institute of Technology Main Campus",
     "Harvard University",
     "Indiana University—Bloomington",
     "Kenyon College",
@@ -1220,6 +1228,16 @@ def usNews(pChoice, pImportance):
     elif pChoice == "Internships":
         #3/17 added CoPilot missing schools in internships list (first 8 schools)
         newrankList = [
+    "Northeastern University",
+    "Drexel University",
+    "Georgia Institute of Technology Main Campus",
+    "Rochester Institute of Technology",
+    "Massachusetts Institute of Technology",
+    "Purdue University Main Campus",
+    "Carnegie Mellon University",
+    "Clemson University",
+    "Duke University",
+    "Cornell University",
     "University Of California San Diego",
     "University Of Florida",
     "University Of Wisconsin Madison",
@@ -1228,18 +1246,6 @@ def usNews(pChoice, pImportance):
     "University Of California Irvine"
     "California Polytechnic State University San Luis Obispo",
     "University Of Miami",
-    "Northeastern University",
-    "Drexel University",
-    "Georgia Institute of Technology",
-    "University of Cincinnati",
-    "Rochester Institute of Technology",
-    "Massachusetts Institute of Technology",
-    "Purdue University--Main Campus",
-    "Carnegie Mellon University",
-    "Elon University",
-    "Clemson University",
-    "Duke University",
-    "Cornell University",
     "Agnes Scott College",
     "Arizona State University",
     "Embry-Riddle Aeronautical University -- Daytona Beach",
@@ -1294,7 +1300,7 @@ def usNews(pChoice, pImportance):
     "Brown University",
     "Georgetown University",
     "Vanderbilt University",
-    "Purdue University--Main Campus",
+    "Purdue University Main Campus",
     "Cornell University",
     "Stanford University",
     "Berry College",
