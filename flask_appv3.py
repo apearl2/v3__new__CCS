@@ -2742,7 +2742,7 @@ def filter():
                         #print(filterListCounter)
                     i += 1
 
-#Finally, attribute-by-attribute report at the end
+#Finally, attribute-by-attribute report at the end (Not available in V3 anymore as of 4/6)
 @app.route('/areport')
 def areport():
     global preattList
