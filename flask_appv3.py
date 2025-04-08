@@ -780,8 +780,8 @@ def bestSort():
             customList[cli] = 'University Of California Irvine'
 
         #3/17
-        print("customList:")
-        print(customList)
+        #print("customList:")
+        #print(customList)
 
 #College Factual Function
 def collegeFactual(pChoice, pImportance):
@@ -1656,7 +1656,6 @@ def next():
     #i = 31
 
     #iscollegesearch.pythonanywhere.com
-    #Active __________________________
     i = 46
 
     atl = ''
@@ -2125,6 +2124,7 @@ def results():
     #converions() and averageA() for P calls
     conversions()
     averageA("P")
+    print("reportfinalListP: ")
     print(reportfinalListP)
 
     #Join P and CF list together-----------------------------------------------------------
@@ -2244,11 +2244,16 @@ def results():
         intendMajorIMU = intendMajorIM
 
         print(intendMajorNameU)
-        usNews(intendMajorNameU, intendMajorIMU)
-        listA(1, "C")
+        print(intendMajorIMU)
 
-        numCcalls += 1
-        print(finalList)
+        if len(intendMajorNameU) < 2:
+            pass
+        else:
+            usNews(intendMajorNameU, intendMajorIMU)
+            listA(1, "C")
+
+            numCcalls += 1
+            print(finalList)
     except:
         print("[]Intend Major not Called in U")
         pass
@@ -2409,6 +2414,9 @@ def filter():
     global aRateDict
     global sizeDict
     global preattList
+
+
+    pacountingVar = ''
 
     newSlist = []
     #1/10 -> potential errors with customList check
@@ -2616,7 +2624,8 @@ def filter():
                 #print("split")
                 #print(sizeDict)
 
-                #return render_template('test.html', testV = preattList)
+                return render_template('test.html', testV = pacountingVar)
+
                 #------------------------------------------------------------------
                 if tenor20 == "twenty":
                     return render_template('filter.html', value1b=first, value2b=second, value3b=third, value4b=fourth,
@@ -2640,6 +2649,10 @@ def filter():
                     #print("Found: " + nowQuery)
                     #print(str(value))
                     #print(str(sizeV))
+
+                    #4/7 check in PA
+                    pacountingVar = pacountingVar + "Found: " + nowQuery
+                    pacountingVar = pacountingVar + "______________"
 
                     fsV = int(sizeV)
                     fsBool = False
@@ -2669,6 +2682,9 @@ def filter():
                     newSlist.append(nowQuery)
 
                     print("Hello: " + goodURL2)
+
+                    pacountingVar = pacountingVar + "Hello: " + goodURL2 + "___________"
+
                     # Gets HTML Data from URL
                     r = requests.get(goodURL2)
                     soup = BeautifulSoup(r.text, 'html.parser')
