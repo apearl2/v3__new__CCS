@@ -1650,13 +1650,13 @@ def next():
     #Increments stl to build up atl
     #3/2 change for in PyCharm------------------------
     #PyCharm V
-    #i = 21
+    i = 21
 
     #iscollegesearch.com
     #i = 31
 
     #iscollegesearch.pythonanywhere.com
-    i = 46
+    #i = 46
 
     atl = ''
     while i < len(stl):
@@ -2244,6 +2244,8 @@ def results():
     numCcalls = 0
 
     #Intended major----------------
+    #Does not work in PA
+    '''
     #TODO 3/4 Duplicates of all colleges on list occur
     try:
         intendMajorNameU = intendMajorName
@@ -2263,6 +2265,7 @@ def results():
     except:
         print("[]Intend Major not Called in U")
         pass
+    '''
 
     #Shared PR and USnews attributes---------------------------
     print("importanceList: v")
@@ -2379,7 +2382,7 @@ def results():
     bestSort()
     tenor20 = request.args.get("z", "twenty")
     #print(tenor20)
-    #print(customList)
+    print(customList)
 
     #Other Way
     first = customList[0]
@@ -2689,6 +2692,7 @@ def filter():
 
                     print("Hello: " + goodURL2)
 
+                    pacountingVar = pacountingVar + nowQuery
                     pacountingVar = pacountingVar + "Hello: " + goodURL2 + "___________"
 
                     # Gets HTML Data from URL
