@@ -1650,13 +1650,13 @@ def next():
     #Increments stl to build up atl
     #3/2 change for in PyCharm------------------------
     #PyCharm V
-    i = 21
+    #i = 21
 
     #iscollegesearch.com
     #i = 31
 
     #iscollegesearch.pythonanywhere.com
-    #i = 46
+    i = 42
 
     atl = ''
     while i < len(stl):
@@ -1756,11 +1756,12 @@ def results():
         #4/9
         #For iscollegesearch.com
         #atl = 'https://www.iscollegesearch.com/calculate?s_=Business_&b_=5&wut_=Economics&z_=5&c_=5&d_=5&e_=5&x_=5&f_=5&g_=5&h_=5&i_=5&j_=5&k_=5&l_=5&m_=5&C=Business&Z_=5'
+        #underscore = atl[43]
 
         #For iscollegesearch.pythonanywhere.com
         atl = 'https://iscollegesearch.pythonanywhere.com/calculate?s_=Business_&b_=7&w_=Economics&z_=8&c_=8&d_=3&e_=5&x_=4&f_=3&g_=4&h_=4&i_=2&j_=8&k_=8&l_=7&m_=7&C=Business&Z_=6&Q_=5&X_=5'
+        underscore = atl[54]
 
-        underscore = atl[43]
         atlCheck = "..."
 
     #return render_template('test.html', testV = checkcount, testV2 = atl)
