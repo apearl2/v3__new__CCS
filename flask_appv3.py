@@ -43,6 +43,7 @@ fullListC = []
 tfullListC = []
 specificsList = []
 preattList = []
+atltransferList = []
 
 aImportance = 0
 numPcalls = 0
@@ -53,7 +54,7 @@ baseList = [25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8
 baseList2 = [25, 24.5, 24, 23.5, 23, 22.5, 22, 21.5, 21, 20.5, 20, 19.5, 19, 18.5, 18, 17.5, 17, 16.5, 16, 15.5, 15, 14.5, 14, 13.5, 13, 12.5, 12, 11.5, 11, 10.5, 10, 9.5, 9, 8.5, 8, 7.5, 7, 6.5, 6, 5.5, 5, 4.5, 4, 3.5, 3, 2.5, 2, 1.5, 1]
 
 stl = ''
-atl = ""
+atl = ''
 
 aRateDict = {'University Of Pennsylvania': 6,
 'Harvard University': 4,
@@ -1641,8 +1642,11 @@ def next():
     # Gets all user inputs from URL and stores them in string
     global stl
     global atl
-    stl = ''
+    global atltransferList
 
+    atltransferList = []
+    stl = ''
+    atl = ''
 
     stl = request.url
     #print(stl)
@@ -1666,8 +1670,12 @@ def next():
     #Check if underscore will be found right on right mode
     print("atl: " + atl)
 
+    #4/22 atltransferList
+    atltransferList.append(atl)
+    atl = ''
+
     #11/20 - test inputStr errors 621
-    return render_template('in_progress.html', valueip = atl)
+    return render_template('in_progress.html', valueip = atltransferList)
 
 #Algorithm for rankings------------------------------------------------------------------
 @app.route('/results')
@@ -1689,7 +1697,8 @@ def results():
     global fullListP
     global fullListC
     global tfullListC
-    global atl
+
+    global atltransferList
 
     #Clears all lists
     customList = []
@@ -1742,6 +1751,9 @@ def results():
                 checkcount += 1"""
 
     atlCheck = ""
+
+    #Different form of atl
+    atl = atltransferList[0]
 
     try:
         underscore = atl[12]
