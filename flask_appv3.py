@@ -1671,6 +1671,7 @@ def next():
     print("atl: " + atl)
 
     #4/22 atltransferList
+    atltransferList.append(0)
     atltransferList.append(atl)
     atl = ''
 
@@ -1753,7 +1754,7 @@ def results():
     atlCheck = ""
 
     #Different form of atl
-    atl = atltransferList[0]
+    atl = atltransferList[1]
 
     try:
         underscore = atl[12]
@@ -2422,9 +2423,9 @@ def results():
         twentieth = customList[19]
 
     if tenor20 == "twenty":
-        return render_template('results.html', value1 = first, value2 = second, value3 = third, value4 = fourth, value5 = fifth, value6 = sixth, value7 = seventh, value8 = eighth, value9 = ninth, value10 = tenth, value11 =  "11. " + eleventh, value12 = "12. " + twelfth, value13 = "13. " + thirteenth, value14 = "14. " + fourteenth, value15 = "15. " + fifteenth, value16 = "16. " + sixteenth, value17 = "17. " + seventeenth, value18 = "18. " + eighteenth, value19 = "19. " + nineteenth, value20 = "20. " + twentieth, valueCheck = atlCheck)
+        return render_template('results.html', value1 = first, value2 = second, value3 = third, value4 = fourth, value5 = fifth, value6 = sixth, value7 = seventh, value8 = eighth, value9 = ninth, value10 = tenth, value11 =  "11. " + eleventh, value12 = "12. " + twelfth, value13 = "13. " + thirteenth, value14 = "14. " + fourteenth, value15 = "15. " + fifteenth, value16 = "16. " + sixteenth, value17 = "17. " + seventeenth, value18 = "18. " + eighteenth, value19 = "19. " + nineteenth, value20 = "20. " + twentieth, valueCheck = atlCheck, atlListCheckEnd = atltransferList)
     else:
-        return render_template('results.html', value1=first, value2=second, value3=third, value4=fourth, value5=fifth, value6=sixth, value7=seventh, value8=eighth, value9=ninth, value10=tenth, valueCheck = atlCheck)
+        return render_template('results.html', value1=first, value2=second, value3=third, value4=fourth, value5=fifth, value6=sixth, value7=seventh, value8=eighth, value9=ninth, value10=tenth, valueCheck = atlCheck, atlListCheckEnd = atltransferList)
 
 #Filters rankings based on acceptance rate... and ---------------------------------------
 @app.route('/filter')
