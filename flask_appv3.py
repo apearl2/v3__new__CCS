@@ -1670,6 +1670,8 @@ def next():
     #Check if underscore will be found right on right mode
     print("atl: " + atl)
 
+    #4/29 get first letter of uSchool to possibly pick from multiple default lists.
+
     #4/22 atltransferList
     atltransferList.append(0)
     atltransferList.append(atl)
@@ -2647,7 +2649,8 @@ def filter():
                 #print("split")
                 #print(sizeDict)
 
-                return render_template('test.html', testV = pacountingVar)
+                #7/30 remove v
+                #return render_template('test.html', testV = pacountingVar)
 
                 #------------------------------------------------------------------
                 if tenor20 == "twenty":
