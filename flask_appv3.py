@@ -1657,10 +1657,10 @@ def next():
     #i = 21
 
     #iscollegesearch.com
-    #i = 31
+    i = 31
 
     #iscollegesearch.pythonanywhere.com
-    i = 42
+    #i = 42
 
     atl = ''
     while i < len(stl):
