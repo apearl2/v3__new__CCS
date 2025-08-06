@@ -2571,8 +2571,26 @@ def filter():
 
     print("tenor20: " + str(tenor20))
 
+    startTime = time.time()
+    print(startTime)
+
     while filterListCounter < 25:
         while i < len(customList):
+            #8/6 trying to stop endless buffering in PA
+            currentTime = time.time()
+            print(currentTime)
+            #Time cutoff v
+            if currentTime - startTime > 20:
+                print("TIME CUT OFF____________________")
+                flcmax = 0
+                #And then adjust filter list
+                iflad = len(filterList)
+                while iflad <= 20:
+                    filterList.append(' ')
+                    iflad += 1
+            else:
+                pass
+
             if filterListCounter > flcmax:
                 # #prints final filtered list
                 #print(filterList)
@@ -2629,12 +2647,13 @@ def filter():
 
                 #Cut off 3/25---------------------------------------------------------------------------------------------
                 #Fake list for git commits
-                fakelist = []
+                #fakelist = []
                 #2/10 renamed
                 #It's the return of the no wait ah wait you're kidding
 
                 #Reformats, then appends to list to be used in attribute-by-attribute report page
-                preattList = []
+                #Commented out 8/6
+                '''preattList = []
                 ipl = 0
                 while ipl < 10:
                     tempipl = filterList[ipl]
@@ -2643,7 +2662,7 @@ def filter():
 
                 preattList = [x.lower() for x in preattList]
                 preattList = [z.replace(' - ', ' ') for z in preattList]
-                preattList = [y.replace(' ', '-') for y in preattList]
+                preattList = [y.replace(' ', '-') for y in preattList]'''
 
                 #print(aRateDict)
                 #print("split")
@@ -2665,7 +2684,7 @@ def filter():
                     return render_template('filter.html', value1b = first, value2b = second, value3b = third, value4b = fourth, value5b = fifth, value6b = sixth, value7b = seventh, value8b = eighth, value9b = ninth, value10b = tenth, valuepal = preattList)
 
             else:
-                # Then search google for acceptance rate of each college on customList
+                # Then search google for acceptance rate of each college on customList (but first try to find in dicts)
                 nowQuery = customList[i]
 
                 try:
